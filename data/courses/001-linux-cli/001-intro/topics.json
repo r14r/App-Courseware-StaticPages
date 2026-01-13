@@ -1,12 +1,46 @@
 [
-  "001-what-is-the-shell.json",
-  "002-starting-a-terminal.json",
-  "003-basic-commands.json",
-  "004-filesystem-layout.json",
-  "005-command-syntax.json",
-  "006-pipelines-and-redirection.json",
-  "007-environment-variables.json",
-  "008-shell-history.json",
-  "009-tab-completion.json",
-  "010-next-steps.json"
+  {
+    "file": "001-what-is-the-shell.json",
+    "title": "What Is The Shell"
+  },
+  {
+    "file": "002-starting-a-terminal.json",
+    "title": "Starting A Terminal"
+  },
+  {
+    "file": "003-basic-commands.json",
+    "title": "Basic Commands"
+  },
+  {
+    "file": "004-filesystem-layout.json",
+    "title": "Filesystem Layout"
+  },
+  {
+    "file": "005-command-syntax.json",
+    "title": "Command Syntax"
+  },
+  {
+    "file": "006-pipelines-and-redirection.json",
+    "title": "Pipelines And Redirection"
+  },
+  {
+    "file": "007-environment-variables.json",
+    "title": "Environment Variables"
+  },
+  {
+    "file": "008-shell-history.json",
+    "title": "Shell History"
+  },
+  {
+    "file": "009-tab-completion.json",
+    "title": "Tab Completion"
+  },
+  {
+    "file": "010-next-steps.json",
+    "title": "Next Steps"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
 ]

@@ -1,12 +1,46 @@
 [
-  "001-what-is-a-variable.json",
-  "002-naming-rules.json",
-  "003-assignment.json",
-  "004-types-basics.json",
-  "005-multiple-assignment.json",
-  "006-mutable-vs-immutable.json",
-  "007-constants-convention.json",
-  "008-type-conversion.json",
-  "009-scope-basics.json",
-  "010-best-practices.json"
+  {
+    "file": "001-what-is-a-variable.json",
+    "title": "What Is A Variable"
+  },
+  {
+    "file": "002-naming-rules.json",
+    "title": "Naming Rules"
+  },
+  {
+    "file": "003-assignment.json",
+    "title": "Assignment"
+  },
+  {
+    "file": "004-types-basics.json",
+    "title": "Types Basics"
+  },
+  {
+    "file": "005-multiple-assignment.json",
+    "title": "Multiple Assignment"
+  },
+  {
+    "file": "006-mutable-vs-immutable.json",
+    "title": "Mutable Vs Immutable"
+  },
+  {
+    "file": "007-constants-convention.json",
+    "title": "Constants Convention"
+  },
+  {
+    "file": "008-type-conversion.json",
+    "title": "Type Conversion"
+  },
+  {
+    "file": "009-scope-basics.json",
+    "title": "Scope Basics"
+  },
+  {
+    "file": "010-best-practices.json",
+    "title": "Best Practices"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
 ]

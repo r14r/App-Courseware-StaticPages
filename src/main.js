@@ -160,9 +160,21 @@ document.addEventListener('alpine:init', () => {
       }
       if (data) {
         this.topicCache[fname] = data;
-        this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
-        this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
-        this.showOnlyTopic = true; // when loading a specific topic, show only that topic in the main view
+          // If the loaded file is a quiz (contains questions), treat it as the chapter quiz
+          if (data && data.questions && Array.isArray(data.questions)) {
+            this.quiz = data;
+            this.answers = {};
+            this.quizState = 'not-started';
+            this.chapterContentHtml = '';
+            this.chapterTitle = (data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title)) || '';
+          } else {
+            // regular topic content
+            this.quiz = null;
+            this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
+            this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+          }
+          // when loading a specific topic, show only that topic in the main view
+          this.showOnlyTopic = true;
       } else {
         this.chapterContentHtml = '<p>No content.</p>';
         this.chapterTitle = chapter.title || '';

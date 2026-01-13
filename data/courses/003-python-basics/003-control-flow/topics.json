@@ -1,12 +1,46 @@
 [
-  "001-if-statements.json",
-  "002-for-loops.json",
-  "003-while-loops.json",
-  "004-break-and-continue.json",
-  "005-comprehensions.json",
-  "006-try-except-basics.json",
-  "007-boolean-expressions.json",
-  "008-itertools-intro.json",
-  "009-enumerate-and-zip.json",
-  "010-best-practices.json"
+  {
+    "file": "001-if-statements.json",
+    "title": "If Statements"
+  },
+  {
+    "file": "002-for-loops.json",
+    "title": "For Loops"
+  },
+  {
+    "file": "003-while-loops.json",
+    "title": "While Loops"
+  },
+  {
+    "file": "004-break-and-continue.json",
+    "title": "Break And Continue"
+  },
+  {
+    "file": "005-comprehensions.json",
+    "title": "Comprehensions"
+  },
+  {
+    "file": "006-try-except-basics.json",
+    "title": "Try Except Basics"
+  },
+  {
+    "file": "007-boolean-expressions.json",
+    "title": "Boolean Expressions"
+  },
+  {
+    "file": "008-itertools-intro.json",
+    "title": "Itertools Intro"
+  },
+  {
+    "file": "009-enumerate-and-zip.json",
+    "title": "Enumerate And Zip"
+  },
+  {
+    "file": "010-best-practices.json",
+    "title": "Best Practices"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
 ]

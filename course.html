@@ -80,25 +80,10 @@
                 </div>
               </article>
 
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
                   <button class="btn btn-outline-secondary btn-sm me-2" @click="prevChapter()">&larr; Prev</button>
                   <button class="btn btn-outline-secondary btn-sm" @click="nextChapter()">Next &rarr;</button>
-                </div>
-                <div>
-                  <template x-if="quiz">
-                    <div>
-                      <template x-if="quizState === 'not-started'">
-                        <button class="btn btn-success btn-sm" @click="startQuiz()">Start Quiz</button>
-                      </template>
-                      <template x-if="quizState === 'in-progress'">
-                        <button class="btn btn-primary btn-sm" @click="submitQuiz()">Submit Quiz</button>
-                      </template>
-                      <template x-if="quizState === 'completed'">
-                        <span class="small">Quiz completed — Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></span>
-                      </template>
-                    </div>
-                  </template>
                 </div>
               </div>
 

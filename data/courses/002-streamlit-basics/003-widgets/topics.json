@@ -1,12 +1,46 @@
 [
-  "001-buttons.json",
-  "002-sliders.json",
-  "003-text-input.json",
-  "004-select-boxes.json",
-  "005-file-uploader.json",
-  "006-date-input.json",
-  "007-widgets-state.json",
-  "008-forms.json",
-  "009-callbacks.json",
-  "010-accessibility.json"
+  {
+    "file": "001-buttons.json",
+    "title": "Buttons"
+  },
+  {
+    "file": "002-sliders.json",
+    "title": "Sliders"
+  },
+  {
+    "file": "003-text-input.json",
+    "title": "Text Input"
+  },
+  {
+    "file": "004-select-boxes.json",
+    "title": "Select Boxes"
+  },
+  {
+    "file": "005-file-uploader.json",
+    "title": "File Uploader"
+  },
+  {
+    "file": "006-date-input.json",
+    "title": "Date Input"
+  },
+  {
+    "file": "007-widgets-state.json",
+    "title": "Widgets State"
+  },
+  {
+    "file": "008-forms.json",
+    "title": "Forms"
+  },
+  {
+    "file": "009-callbacks.json",
+    "title": "Callbacks"
+  },
+  {
+    "file": "010-accessibility.json",
+    "title": "Accessibility"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
 ]
