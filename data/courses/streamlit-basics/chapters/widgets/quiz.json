@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "id": "widgets-q1",
+      "type": "single",
+      "question": "Which function creates a slider?",
+      "options": [
+        "st.slider()",
+        "st.input()",
+        "st.range()"
+      ],
+      "correctIndex": 0,
+      "explanation": "st.slider() creates sliders."
+    }
+  ]
+}

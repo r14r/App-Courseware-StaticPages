@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Courseware – Vite + Tailwind + Alpine + HTMX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="min-h-screen" x-data="demoCourseList">
+    <header class="bg-slate-900 text-slate-50">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-baseline gap-3">
+        <h1 class="text-lg font-semibold tracking-tight">Courseware</h1>
+        <p class="text-sm text-slate-300">
+          Vite + Tailwind CSS + Alpine.js + HTMX starter.
+        </p>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-6">
+      <h2 class="text-xl font-semibold mb-4">Sample Courses</h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <template x-for="course in courses" :key="course.id">
+          <article
+            class="bg-white shadow-sm rounded-lg border border-slate-200 p-4 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition cursor-pointer"
+            @click="goToCourse(course.id)"
+          >
+            <div>
+              <h3 class="text-base font-semibold mb-1" x-text="course.title"></h3>
+              <p class="text-sm text-slate-600" x-text="course.description"></p>
+            </div>
+            <div class="mt-3 flex items-center justify-between">
+              <span class="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-700">
+                Open course
+              </span>
+              <span class="text-xs text-slate-400" x-text="'ID: ' + course.id"></span>
+            </div>
+          </article>
+        </template>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

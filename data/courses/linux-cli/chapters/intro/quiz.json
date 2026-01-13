@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "id": "intro-q1",
+      "type": "single",
+      "question": "What is the Linux shell?",
+      "options": [
+        "A graphical file manager",
+        "A text-based interface",
+        "A video player"
+      ],
+      "correctIndex": 1,
+      "explanation": "The shell is text-based."
+    }
+  ]
+}

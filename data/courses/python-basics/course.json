@@ -1,0 +1,19 @@
+{
+  "id": "learning-python-basics",
+  "title": "Learning Python Basics",
+  "description": "Intro to Python programming.",
+  "chapters": [
+    {
+      "id": "intro",
+      "title": "Introduction to Python"
+    },
+    {
+      "id": "variables",
+      "title": "Variables and Data Types"
+    },
+    {
+      "id": "control-flow",
+      "title": "Control Flow"
+    }
+  ]
+}

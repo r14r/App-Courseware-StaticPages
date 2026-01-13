@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Course – Courseware Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="min-h-screen bg-slate-100 text-slate-900" x-data="demoCourseView" x-init="init()">
+    <header class="bg-slate-900 text-slate-50">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+        <a href="/" class="text-xs text-slate-300 hover:text-white">&larr; All courses</a>
+        <div>
+          <h1 class="text-lg font-semibold tracking-tight" x-text="course?.title || 'Course'"></h1>
+          <p class="text-xs text-slate-300" x-text="course?.description"></p>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-6">
+      <section class="bg-white border border-slate-200 rounded-lg shadow-sm p-4">
+        <h2 class="text-sm font-semibold mb-3">Chapters (demo)</h2>
+        <ul class="space-y-1">
+          <template x-for="(ch, idx) in chapters" :key="idx">
+            <li class="text-sm text-slate-800">
+              <span class="font-medium" x-text="(idx+1) + '. ' + ch.title"></span>
+              <span class="text-slate-500"> – </span>
+              <span x-text="ch.summary"></span>
+            </li>
+          </template>
+        </ul>
+        <p class="mt-4 text-xs text-slate-500">
+          This page is wired to Alpine.js only for now. Replace the demo data in <code>demoCourseView</code>
+          with real API calls to your PHP backend (Flight/Slim/Lumen/etc.).
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "id": "navigation-q1",
+      "type": "single",
+      "question": "Which command lists files?",
+      "options": [
+        "ls",
+        "pwd",
+        "whoami"
+      ],
+      "correctIndex": 0,
+      "explanation": "ls lists files."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "id": "intro-q1",
+      "type": "single",
+      "question": "What does Streamlit do?",
+      "options": [
+        "Turns scripts into web apps",
+        "Runs C++",
+        "Starts servers"
+      ],
+      "correctIndex": 0,
+      "explanation": "Streamlit builds apps."
+    }
+  ]
+}

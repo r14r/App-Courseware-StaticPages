@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "id": "layout-q1",
+      "type": "single",
+      "question": "Which function creates columns?",
+      "options": [
+        "st.columns()",
+        "st.block()",
+        "st.sidebar()"
+      ],
+      "correctIndex": 0,
+      "explanation": "st.columns() creates columns."
+    }
+  ]
+}
