@@ -4,158 +4,158 @@
     <meta charset="UTF-8" />
     <title>Course – Courseware Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-3g2KQy4E6qKq1+0Q1gk3G1XgT1n0e7G9q5J1q3J1p6Q2Z6s1V5x3V6G7Q8R9S3T1" crossorigin="anonymous">
   </head>
-  <body class="min-h-screen bg-slate-100 text-slate-900" x-data="demoCourseView" x-init="init()">
-    <header class="bg-slate-900 text-slate-50">
-      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
-        <a href="/" class="text-xs text-slate-300 hover:text-white">&larr; All courses</a>
+  <body x-data="demoCourseView" x-init="init()">
+    <header class="bg-light border-bottom">
+      <div class="container py-3 d-flex align-items-center gap-3">
+        <a href="/" class="small text-muted">&larr; All courses</a>
         <div>
-          <h1 class="text-lg font-semibold tracking-tight" x-text="course?.title || 'Course'"></h1>
-          <p class="text-xs text-slate-300" x-text="course?.description"></p>
+          <h1 class="h5 mb-0" x-text="course?.title || 'Course'"></h1>
+          <p class="small text-muted mb-0" x-text="course?.description"></p>
         </div>
       </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <main class="container py-4">
+      <div class="row">
         <!-- Sidebar -->
-        <aside class="md:col-span-1">
-          <section class="bg-white border border-slate-200 rounded-lg shadow-sm p-4 sticky top-6">
-            <h2 class="text-sm font-semibold mb-3">Chapters</h2>
-            <ul class="space-y-2">
-              <template x-for="(ch, idx) in chapters" :key="ch.id">
-                <li>
-                  <div>
-                    <button
-                      class="w-full text-left px-2 py-2 rounded hover:bg-slate-50"
-                      :class="{'bg-slate-50': selectedChapterIndex === idx}"
-                      @click="loadChapter(idx)"
-                    >
-                      <div class="text-sm font-medium" x-text="(idx+1) + '. ' + ch.title"></div>
-                    </button>
-                    <template x-if="ch.topics && ch.topics.length">
-                      <ul class="pl-4 mt-1 space-y-1">
-                        <template x-for="(t, tidx) in ch.topics" :key="t.file || t">
-                          <li>
-                            <button
-                              class="w-full text-left px-2 py-1 rounded text-sm hover:bg-slate-50"
-                              :class="{'bg-slate-100': selectedChapterIndex === idx && selectedTopicIndex === tidx}"
-                              @click="loadChapter(idx).then(()=>loadTopic(tidx))"
-                            >
-                              <span x-text="(t.title || (t.file||t).replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' '))"></span>
-                            </button>
-                          </li>
+        <aside class="col-md-3 mb-3">
+          <div class="card sticky-top" style="top:1rem;">
+            <div class="card-body">
+              <h2 class="h6">Chapters</h2>
+              <div class="accordion" id="chaptersAccordion">
+                <template x-for="(ch, idx) in chapters" :key="ch.id">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" :id="'heading'+idx">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+idx" aria-expanded="false" :aria-controls="'collapse'+idx" @click="loadChapter(idx)">
+                        <span x-text="(idx+1) + '. ' + ch.title"></span>
+                      </button>
+                    </h2>
+                    <div :id="'collapse'+idx" class="accordion-collapse collapse" :aria-labelledby="'heading'+idx" data-bs-parent="#chaptersAccordion">
+                      <div class="accordion-body p-2">
+                        <template x-if="ch.topics && ch.topics.length">
+                          <ul class="list-group list-group-flush">
+                            <template x-for="(t, tidx) in ch.topics" :key="t.file || t">
+                              <li class="list-group-item py-1">
+                                <button class="btn btn-link p-0 text-start" @click="loadChapter(idx).then(()=>loadTopic(tidx))">
+                                  <span x-text="t.title || (t.file||t).replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' ')"></span>
+                                </button>
+                              </li>
+                            </template>
+                          </ul>
                         </template>
-                      </ul>
-                    </template>
+                      </div>
+                    </div>
                   </div>
-                </li>
-              </template>
-            </ul>
-          </section>
+                </template>
+              </div>
+            </div>
+          </div>
         </aside>
 
         <!-- Main content -->
-        <section class="md:col-span-3 bg-white border border-slate-200 rounded-lg shadow-sm p-6">
-          <div class="mb-4">
-            <h2 class="text-lg font-semibold" x-text="course?.title"></h2>
-            <p class="text-sm text-slate-500" x-text="course?.description"></p>
-          </div>
-
-          <article>
-            <h3 class="text-md font-semibold mb-2" x-text="chapterTitle || chapters[selectedChapterIndex]?.title || ''"></h3>
-
-            <template x-if="topics && topics.length">
-              <div class="mb-3">
-                <h4 class="text-sm font-medium mb-2">Topics</h4>
-                <ul class="space-y-1">
-                  <template x-for="(t, tidx) in topics" :key="t">
-                    <li>
-                      <button
-                        class="w-full text-left px-2 py-1 rounded hover:bg-slate-50"
-                        :class="{'bg-slate-100': selectedTopicIndex === tidx}"
-                        @click="loadTopic(tidx)"
-                      >
-                        <span x-text="t.replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' ')"></span>
-                      </button>
-                    </li>
-                  </template>
-                </ul>
+        <section class="col-md-9">
+          <div class="card">
+            <div class="card-body">
+              <div class="mb-4">
+                <h2 class="h5" x-text="course?.title"></h2>
+                <p class="text-muted" x-text="course?.description"></p>
               </div>
-            </template>
 
-            <div class="prose max-w-none" x-html="chapterContentHtml"></div>
-          </article>
+              <article>
+                <h3 class="h6" x-text="chapterTitle || chapters[selectedChapterIndex]?.title || ''"></h3>
+                <div class="mt-3" x-show="topics && topics.length">
+                  <h4 class="fw-semibold">Topics</h4>
+                  <ul class="list-group mb-3">
+                    <template x-for="(t, tidx) in topics" :key="t.file || t">
+                      <li class="list-group-item">
+                        <button class="btn btn-link p-0" @click="loadTopic(tidx)">
+                          <span x-text="(t.title || (t.file||t).replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' '))"></span>
+                        </button>
+                      </li>
+                    </template>
+                  </ul>
+                </div>
 
-          <div class="mt-6 flex items-center justify-between">
-            <div class="flex gap-2">
-              <button class="px-3 py-1 rounded bg-slate-100" @click="prevChapter()">&larr; Prev</button>
-              <button class="px-3 py-1 rounded bg-slate-100" @click="nextChapter()">Next &rarr;</button>
-            </div>
-            <div>
-              <template x-if="quiz">
+                <div x-html="chapterContentHtml" class="mb-3"></div>
+              </article>
+
+              <div class="d-flex justify-content-between align-items-center">
                 <div>
-                  <template x-if="quizState === 'not-started'">
-                    <button class="px-3 py-1 rounded bg-emerald-500 text-white" @click="startQuiz()">Start Quiz</button>
-                  </template>
-                  <template x-if="quizState === 'in-progress'">
-                    <button class="px-3 py-1 rounded bg-blue-600 text-white" @click="submitQuiz()">Submit Quiz</button>
-                  </template>
-                  <template x-if="quizState === 'completed'">
-                    <span class="text-sm">Quiz completed — Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></span>
+                  <button class="btn btn-outline-secondary btn-sm me-2" @click="prevChapter()">&larr; Prev</button>
+                  <button class="btn btn-outline-secondary btn-sm" @click="nextChapter()">Next &rarr;</button>
+                </div>
+                <div>
+                  <template x-if="quiz">
+                    <div>
+                      <template x-if="quizState === 'not-started'">
+                        <button class="btn btn-success btn-sm" @click="startQuiz()">Start Quiz</button>
+                      </template>
+                      <template x-if="quizState === 'in-progress'">
+                        <button class="btn btn-primary btn-sm" @click="submitQuiz()">Submit Quiz</button>
+                      </template>
+                      <template x-if="quizState === 'completed'">
+                        <span class="small">Quiz completed — Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></span>
+                      </template>
+                    </div>
                   </template>
                 </div>
-              </template>
-            </div>
-          </div>
+              </div>
 
-          <!-- Quiz area -->
-          <div class="mt-6">
-            <template x-if="quiz">
-              <div>
-                <template x-if="quizState === 'in-progress'">
-                  <form class="space-y-6">
-                    <template x-for="(q, qidx) in quiz.questions" :key="q.id">
-                      <fieldset>
-                        <legend class="font-medium mb-2" x-text="(qidx+1) + '. ' + q.question"></legend>
-                        <div class="space-y-1">
-                          <template x-for="(opt, oidx) in q.options" :key="oidx">
-                            <label class="flex items-center gap-2">
-                              <input type="radio" :name="q.id" :value="oidx" x-model="answers[q.id]" />
-                              <span x-text="opt"></span>
-                            </label>
-                          </template>
-                        </div>
-                      </fieldset>
+              <!-- Quiz area -->
+              <div class="mt-3">
+                <template x-if="quiz">
+                  <div>
+                    <template x-if="quizState === 'in-progress'">
+                      <form>
+                        <template x-for="(q, qidx) in quiz.questions" :key="q.id">
+                          <fieldset class="mb-3">
+                            <legend class="fw-medium" x-text="(qidx+1) + '. ' + q.question"></legend>
+                            <div>
+                              <template x-for="(opt, oidx) in q.options" :key="oidx">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" :name="q.id" :value="oidx" x-model="answers[q.id]" />
+                                  <label class="form-check-label" x-text="opt"></label>
+                                </div>
+                              </template>
+                            </div>
+                          </fieldset>
+                        </template>
+                      </form>
                     </template>
-                  </form>
-                </template>
 
-                <template x-if="quizState === 'completed'">
-                  <div class="space-y-4">
-                    <h4 class="font-semibold">Quiz Summary</h4>
-                    <div class="text-sm">Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></div>
-                    <template x-for="(q, qidx) in quiz.questions" :key="q.id">
-                      <div class="p-3 border rounded">
-                        <div class="font-medium" x-text="(qidx+1) + '. ' + q.question"></div>
-                        <div class="mt-2">
-                          <div>Your answer: <span x-text="q.options[answers[q.id]] || '—'" class="font-medium"></span></div>
-                          <div>Correct answer: <span x-text="q.options[q.correctIndex]" class="font-medium text-emerald-600"></span></div>
-                          <template x-if="q.explanation">
-                            <div class="mt-2 text-sm text-slate-600" x-text="q.explanation"></div>
-                          </template>
-                        </div>
+                    <template x-if="quizState === 'completed'">
+                      <div>
+                        <h5 class="h6">Quiz Summary</h5>
+                        <div class="mb-2">Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></div>
+                        <template x-for="(q, qidx) in quiz.questions" :key="q.id">
+                          <div class="card mb-2">
+                            <div class="card-body">
+                              <div class="fw-medium" x-text="(qidx+1) + '. ' + q.question"></div>
+                              <div class="mt-2">
+                                <div>Your answer: <span x-text="q.options[answers[q.id]] || '—'" class="fw-semibold"></span></div>
+                                <div>Correct answer: <span x-text="q.options[q.correctIndex]" class="fw-semibold text-success"></span></div>
+                                <template x-if="q.explanation">
+                                  <div class="mt-2 text-muted" x-text="q.explanation"></div>
+                                </template>
+                              </div>
+                            </div>
+                          </div>
+                        </template>
                       </div>
                     </template>
                   </div>
                 </template>
               </div>
-            </template>
+            </div>
           </div>
         </section>
       </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6VQmQb6Y1Kz2e1Z9n3k5i6Qe0r1K3y4p6s7t8v9w0x1y" crossorigin="anonymous"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
