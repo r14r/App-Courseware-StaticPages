@@ -1,0 +1,5 @@
+{
+  "id": "t10",
+  "title": "Best practices",
+  "contentHtml": "<p>Prefer readable logic and small functions for control flow.</p>"
+}

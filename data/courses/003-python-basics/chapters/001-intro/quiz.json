@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "pyintro-q1",
+      "type": "single",
+      "question": "What is Python?",
+      "options": [
+        "A compiled language",
+        "An interpreted language",
+        "A database"
+      ],
+      "correctIndex": 1,
+      "explanation": "Python is an interpreted language."
+    },
+    {
+      "id": "pyintro-q2",
+      "type": "single",
+      "question": "Which function prints to stdout?",
+      "options": [
+        "echo",
+        "print",
+        "puts"
+      ],
+      "correctIndex": 1,
+      "explanation": "`print()` prints to stdout in Python."
+    },
+    {
+      "id": "pyintro-q3",
+      "type": "single",
+      "question": "How do you start the REPL?",
+      "options": [
+        "python",
+        "pysh",
+        "runpy"
+      ],
+      "correctIndex": 0,
+      "explanation": "Run `python` or `python3` to start REPL."
+    },
+    {
+      "id": "pyintro-q4",
+      "type": "single",
+      "question": "Which symbol starts a comment?",
+      "options": [
+        "//",
+        "#",
+        "/*"
+      ],
+      "correctIndex": 1,
+      "explanation": "`#` begins a comment."
+    },
+    {
+      "id": "pyintro-q5",
+      "type": "single",
+      "question": "How to create a virtual env?",
+      "options": [
+        "venv",
+        "mkvenv",
+        "vcreate"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use `python -m venv env`."
+    },
+    {
+      "id": "pyintro-q6",
+      "type": "single",
+      "question": "Which package manager is standard?",
+      "options": [
+        "npm",
+        "pip",
+        "gem"
+      ],
+      "correctIndex": 1,
+      "explanation": "`pip` installs Python packages."
+    },
+    {
+      "id": "pyintro-q7",
+      "type": "single",
+      "question": "What delimits blocks?",
+      "options": [
+        "Braces",
+        "Indentation",
+        "Keywords"
+      ],
+      "correctIndex": 1,
+      "explanation": "Indentation defines blocks in Python."
+    },
+    {
+      "id": "pyintro-q8",
+      "type": "single",
+      "question": "Which file extension is common for Python files?",
+      "options": [
+        ".py",
+        ".js",
+        ".java"
+      ],
+      "correctIndex": 0,
+      "explanation": "Python source files use `.py`."
+    },
+    {
+      "id": "pyintro-q9",
+      "type": "single",
+      "question": "Which command installs a package?",
+      "options": [
+        "pip install pkg",
+        "apt install pkg",
+        "npm install pkg"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use `pip install` to install Python packages."
+    },
+    {
+      "id": "pyintro-q10",
+      "type": "single",
+      "question": "How to check Python version?",
+      "options": [
+        "python --version",
+        "py --help",
+        "pip --version"
+      ],
+      "correctIndex": 0,
+      "explanation": "`python --version` shows the interpreter version."
+    }
+  ]
+}

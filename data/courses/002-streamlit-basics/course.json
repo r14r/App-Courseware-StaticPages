@@ -1,0 +1,19 @@
+{
+  "id": "learning-streamlit-basics",
+  "title": "Learning Streamlit Basics",
+  "description": "Interactive web apps with pure Python.",
+  "chapters": [
+    {
+      "id": "001-intro",
+      "title": "What is Streamlit?"
+    },
+    {
+      "id": "002-layout",
+      "title": "Layout and Page Structure"
+    },
+    {
+      "id": "003-widgets",
+      "title": "Using Widgets"
+    }
+  ]
+}

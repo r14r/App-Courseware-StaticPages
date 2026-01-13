@@ -1,0 +1,14 @@
+{
+  "questions": [
+    { "id": "w-q1", "type": "single", "question": "Which function creates a slider?", "options": ["st.slider()","st.input()","st.range()"], "correctIndex": 0, "explanation": "st.slider() creates sliders." },
+    { "id": "w-q2", "type": "single", "question": "Which widget uploads files?", "options": ["st.uploader()","st.file_uploader()","st.upload()"], "correctIndex": 1, "explanation": "`st.file_uploader()` handles file uploads." },
+    { "id": "w-q3", "type": "single", "question": "Which captures text input?", "options": ["st.text_input()","st.input_text()","st.write()"], "correctIndex": 0, "explanation": "`st.text_input()` gets text from users." },
+    { "id": "w-q4", "type": "single", "question": "Which allows multiple selections?", "options": ["st.selectbox()","st.multiselect()","st.checkbox()"], "correctIndex": 1, "explanation": "`st.multiselect()` allows multiple choices." },
+    { "id": "w-q5", "type": "single", "question": "How to group inputs and submit once?", "options": ["st.form()","st.group()","st.bundle()"], "correctIndex": 0, "explanation": "Use `st.form()` to group inputs with a submit button." },
+    { "id": "w-q6", "type": "single", "question": "Which stores widget values across runs?", "options": ["st.cache","session state","st.state"], "correctIndex": 1, "explanation": "Session state preserves values per session." },
+    { "id": "w-q7", "type": "single", "question": "Which widget returns a boolean?", "options": ["st.checkbox()","st.slider()","st.selectbox()"], "correctIndex": 0, "explanation": "`st.checkbox()` returns True/False." },
+    { "id": "w-q8", "type": "single", "question": "Which widget shows a progress bar?", "options": ["st.progress()","st.loader()","st.spinner()"], "correctIndex": 0, "explanation": "`st.progress()` displays a progress bar." },
+    { "id": "w-q9", "type": "single", "question": "Which widget captures dates?", "options": ["st.date_input()","st.calendar()","st.datepick()"], "correctIndex": 0, "explanation": "`st.date_input()` captures dates." },
+    { "id": "w-q10", "type": "single", "question": "Which is recommended for accessibility?", "options": ["Avoid labels","Add meaningful labels","Use images only"], "correctIndex": 1, "explanation": "Add clear, meaningful labels for widgets." }
+  ]
+}

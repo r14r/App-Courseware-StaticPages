@@ -1,0 +1,12 @@
+[
+  "001-using-cd.json",
+  "002-listing-files.json",
+  "003-path-basics.json",
+  "004-home-and-tilde.json",
+  "005-absolute-vs-relative.json",
+  "006-finding-files.json",
+  "007-file-previews.json",
+  "008-tab-completion.json",
+  "009-globbing.json",
+  "010-shortcuts.json"
+]

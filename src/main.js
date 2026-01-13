@@ -1,71 +1,179 @@
 // src/main.js
 
-// Import Tailwind CSS
 import './styles.css';
-
-// Import Alpine.js
 import Alpine from 'alpinejs';
-
-// Import htmx (registers global `htmx`)
 import 'htmx.org';
 
-// Make Alpine globally available
 window.Alpine = Alpine;
 
-// Register Alpine components BEFORE Alpine.start()
+// Helper: fetch JSON and return parsed object or null on 404
+async function fetchJson(path) {
+  try {
+    const res = await fetch(path);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (e) {
+    return null;
+  }
+}
+
 document.addEventListener('alpine:init', () => {
   Alpine.data('demoCourseList', () => ({
-    courses: [
-      { id: 1, title: 'Learning Linux CLI', description: 'Intro to terminal, navigation and permissions.' },
-      { id: 2, title: 'Learning Streamlit Basics', description: 'Build interactive Python web apps.' },
-      { id: 3, title: 'Learning Python Basics', description: 'Syntax, data types and control flow.' },
-    ],
-    goToCourse(id) {
-      window.location.href = `/course.html?id=${encodeURIComponent(id)}`;
+    courses: [],
+    async init() {
+      // index.json contains an array of course folder slugs
+      const idx = await fetchJson('/data/courses/index.json');
+      if (!idx || !Array.isArray(idx)) return;
+
+      const list = [];
+      for (const item of idx) {
+        const slug = item.slug || item;
+        const course = await fetchJson(`/data/courses/${slug}/course.json`);
+        if (course) {
+          list.push({ slug, title: course.title, description: course.description || '', id: course.id || slug });
+        }
+      }
+      this.courses = list;
+    },
+    goToCourse(slug) {
+      window.location.href = `/course.html?id=${encodeURIComponent(slug)}`;
     },
   }));
 
   Alpine.data('demoCourseView', () => ({
-    courseId: null,
+    slug: null,
     course: null,
     chapters: [],
-    init() {
+    selectedChapterIndex: 0,
+    chapterContentHtml: '',
+    chapterTitle: '',
+    topics: [],
+    selectedTopicIndex: 0,
+    topicCache: {},
+    quiz: null,
+    answers: {},
+    quizState: 'not-started', // not-started | in-progress | completed
+
+    async init() {
       const params = new URLSearchParams(window.location.search);
-      this.courseId = params.get('id') || '1';
-
-      const demoMap = {
-        '1': {
-          title: 'Learning Linux CLI',
-          description: 'Intro to terminal, navigation and permissions.',
-          chapters: [
-            { title: 'What is the Shell?', summary: 'Text interface to the OS.' },
-            { title: 'Navigation', summary: 'pwd, ls, cd.' },
-          ],
-        },
-        '2': {
-          title: 'Learning Streamlit Basics',
-          description: 'From script to web app.',
-          chapters: [
-            { title: 'What is Streamlit?', summary: 'High-level web framework.' },
-            { title: 'Layouts', summary: 'Columns and sidebars.' },
-          ],
-        },
-        '3': {
-          title: 'Learning Python Basics',
-          description: 'First steps in Python.',
-          chapters: [
-            { title: 'Intro', summary: 'Why Python.' },
-            { title: 'Variables', summary: 'Store data in memory.' },
-          ],
-        },
-      };
-
-      const c = demoMap[this.courseId] || demoMap['1'];
-      this.course = { title: c.title, description: c.description };
-      this.chapters = c.chapters;
+      this.slug = params.get('id') || 'linux-cli';
+      await this.loadCourse();
+      if (this.chapters.length) await this.loadChapter(0);
     },
+
+    async loadCourse() {
+      const course = await fetchJson(`/data/courses/${this.slug}/course.json`);
+      if (!course) {
+        this.course = { title: 'Course not found', description: '' };
+        this.chapters = [];
+        return;
+      }
+      this.course = course;
+      this.chapters = course.chapters || [];
+    },
+
+    async loadChapter(idx) {
+      if (idx < 0 || idx >= this.chapters.length) return;
+      this.selectedChapterIndex = idx;
+      const chapter = this.chapters[idx];
+
+      // Try topic-based structure first
+      const topicsIndex = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/topics.json`);
+      if (topicsIndex && Array.isArray(topicsIndex) && topicsIndex.length) {
+        this.topics = topicsIndex.slice();
+        this.selectedTopicIndex = 0;
+        await this.loadTopic(this.selectedTopicIndex);
+      } else {
+        // Fallback to single content.json
+        this.topics = [];
+        this.selectedTopicIndex = 0;
+        const content = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/content.json`);
+        this.chapterContentHtml = (content && content.contentHtml) ? content.contentHtml : '<p>No content.</p>';
+        this.chapterTitle = chapter.title || '';
+      }
+
+      const quiz = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/quiz.json`);
+      this.quiz = quiz && quiz.questions ? quiz : null;
+      this.answers = {};
+      this.quizState = 'not-started';
+    },
+
+    async loadTopic(tidx) {
+      const chapter = this.chapters[this.selectedChapterIndex];
+      if (!chapter) return;
+      if (tidx < 0 || tidx >= this.topics.length) return;
+      this.selectedTopicIndex = tidx;
+      const fname = this.topics[tidx];
+      if (this.topicCache[fname]) {
+        const t = this.topicCache[fname];
+        this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
+        this.chapterTitle = t.title || chapter.title || '';
+        return;
+      }
+      const data = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/${fname}`);
+      if (data) {
+        this.topicCache[fname] = data;
+        this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
+        this.chapterTitle = data.title || chapter.title || '';
+      } else {
+        this.chapterContentHtml = '<p>No content.</p>';
+        this.chapterTitle = chapter.title || '';
+      }
+    },
+
+    nextChapter() {
+      // If current chapter has topics, move to next topic first
+      if (this.topics && this.selectedTopicIndex < this.topics.length - 1) {
+        this.loadTopic(this.selectedTopicIndex + 1);
+        return;
+      }
+      if (this.selectedChapterIndex < this.chapters.length - 1) {
+        this.loadChapter(this.selectedChapterIndex + 1);
+      }
+    },
+
+    prevChapter() {
+      // If current chapter has topics and not at first, go to previous topic
+      if (this.topics && this.selectedTopicIndex > 0) {
+        this.loadTopic(this.selectedTopicIndex - 1);
+        return;
+      }
+      if (this.selectedChapterIndex > 0) {
+        // load previous chapter and jump to its last topic if present
+        const prevIdx = this.selectedChapterIndex - 1;
+        this.loadChapter(prevIdx);
+        if (this.topics && this.topics.length) {
+          this.loadTopic(this.topics.length - 1);
+        }
+      }
+    },
+
+    startQuiz() {
+      if (!this.quiz) return;
+      this.quizState = 'in-progress';
+    },
+
+    submitQuiz() {
+      // basic validation: ensure every question has an answer
+      const unanswered = this.quiz.questions.some(q => this.answers[q.id] === undefined);
+      if (unanswered) {
+        alert('Please answer all questions before submitting.');
+        return;
+      }
+      this.quizState = 'completed';
+    },
+
+    score() {
+      if (!this.quiz) return 0;
+      let s = 0;
+      for (const q of this.quiz.questions) {
+        if (q.type === 'single') {
+          if (Number(this.answers[q.id]) === Number(q.correctIndex)) s++;
+        }
+      }
+      return s;
+    }
   }));
 });
 
-// Now start Alpine
 Alpine.start();

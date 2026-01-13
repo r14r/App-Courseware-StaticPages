@@ -1,0 +1,12 @@
+[
+  "001-what-is-a-variable.json",
+  "002-naming-rules.json",
+  "003-assignment.json",
+  "004-types-basics.json",
+  "005-multiple-assignment.json",
+  "006-mutable-vs-immutable.json",
+  "007-constants-convention.json",
+  "008-type-conversion.json",
+  "009-scope-basics.json",
+  "010-best-practices.json"
+]

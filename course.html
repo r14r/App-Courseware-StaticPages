@@ -17,22 +17,126 @@
     </header>
 
     <main class="max-w-5xl mx-auto px-4 py-6">
-      <section class="bg-white border border-slate-200 rounded-lg shadow-sm p-4">
-        <h2 class="text-sm font-semibold mb-3">Chapters (demo)</h2>
-        <ul class="space-y-1">
-          <template x-for="(ch, idx) in chapters" :key="idx">
-            <li class="text-sm text-slate-800">
-              <span class="font-medium" x-text="(idx+1) + '. ' + ch.title"></span>
-              <span class="text-slate-500"> – </span>
-              <span x-text="ch.summary"></span>
-            </li>
-          </template>
-        </ul>
-        <p class="mt-4 text-xs text-slate-500">
-          This page is wired to Alpine.js only for now. Replace the demo data in <code>demoCourseView</code>
-          with real API calls to your PHP backend (Flight/Slim/Lumen/etc.).
-        </p>
-      </section>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Sidebar -->
+        <aside class="md:col-span-1">
+          <section class="bg-white border border-slate-200 rounded-lg shadow-sm p-4 sticky top-6">
+            <h2 class="text-sm font-semibold mb-3">Chapters</h2>
+            <ul class="space-y-2">
+              <template x-for="(ch, idx) in chapters" :key="ch.id">
+                <li>
+                  <button
+                    class="w-full text-left px-2 py-2 rounded hover:bg-slate-50"
+                    :class="{'bg-slate-50': selectedChapterIndex === idx}"
+                    @click="loadChapter(idx)"
+                  >
+                    <div class="text-sm font-medium" x-text="(idx+1) + '. ' + ch.title"></div>
+                  </button>
+                </li>
+              </template>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- Main content -->
+        <section class="md:col-span-3 bg-white border border-slate-200 rounded-lg shadow-sm p-6">
+          <div class="mb-4">
+            <h2 class="text-lg font-semibold" x-text="course?.title"></h2>
+            <p class="text-sm text-slate-500" x-text="course?.description"></p>
+          </div>
+
+          <article>
+            <h3 class="text-md font-semibold mb-2" x-text="chapterTitle || chapters[selectedChapterIndex]?.title || ''"></h3>
+
+            <template x-if="topics && topics.length">
+              <div class="mb-3">
+                <h4 class="text-sm font-medium mb-2">Topics</h4>
+                <ul class="space-y-1">
+                  <template x-for="(t, tidx) in topics" :key="t">
+                    <li>
+                      <button
+                        class="w-full text-left px-2 py-1 rounded hover:bg-slate-50"
+                        :class="{'bg-slate-100': selectedTopicIndex === tidx}"
+                        @click="loadTopic(tidx)"
+                      >
+                        <span x-text="t.replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' ')"></span>
+                      </button>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </template>
+
+            <div class="prose max-w-none" x-html="chapterContentHtml"></div>
+          </article>
+
+          <div class="mt-6 flex items-center justify-between">
+            <div class="flex gap-2">
+              <button class="px-3 py-1 rounded bg-slate-100" @click="prevChapter()">&larr; Prev</button>
+              <button class="px-3 py-1 rounded bg-slate-100" @click="nextChapter()">Next &rarr;</button>
+            </div>
+            <div>
+              <template x-if="quiz">
+                <div>
+                  <template x-if="quizState === 'not-started'">
+                    <button class="px-3 py-1 rounded bg-emerald-500 text-white" @click="startQuiz()">Start Quiz</button>
+                  </template>
+                  <template x-if="quizState === 'in-progress'">
+                    <button class="px-3 py-1 rounded bg-blue-600 text-white" @click="submitQuiz()">Submit Quiz</button>
+                  </template>
+                  <template x-if="quizState === 'completed'">
+                    <span class="text-sm">Quiz completed — Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></span>
+                  </template>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <!-- Quiz area -->
+          <div class="mt-6">
+            <template x-if="quiz">
+              <div>
+                <template x-if="quizState === 'in-progress'">
+                  <form class="space-y-6">
+                    <template x-for="(q, qidx) in quiz.questions" :key="q.id">
+                      <fieldset>
+                        <legend class="font-medium mb-2" x-text="(qidx+1) + '. ' + q.question"></legend>
+                        <div class="space-y-1">
+                          <template x-for="(opt, oidx) in q.options" :key="oidx">
+                            <label class="flex items-center gap-2">
+                              <input type="radio" :name="q.id" :value="oidx" x-model="answers[q.id]" />
+                              <span x-text="opt"></span>
+                            </label>
+                          </template>
+                        </div>
+                      </fieldset>
+                    </template>
+                  </form>
+                </template>
+
+                <template x-if="quizState === 'completed'">
+                  <div class="space-y-4">
+                    <h4 class="font-semibold">Quiz Summary</h4>
+                    <div class="text-sm">Score: <strong x-text="score()"></strong> / <span x-text="quiz.questions.length"></span></div>
+                    <template x-for="(q, qidx) in quiz.questions" :key="q.id">
+                      <div class="p-3 border rounded">
+                        <div class="font-medium" x-text="(qidx+1) + '. ' + q.question"></div>
+                        <div class="mt-2">
+                          <div>Your answer: <span x-text="q.options[answers[q.id]] || '—'" class="font-medium"></span></div>
+                          <div>Correct answer: <span x-text="q.options[q.correctIndex]" class="font-medium text-emerald-600"></span></div>
+                          <template x-if="q.explanation">
+                            <div class="mt-2 text-sm text-slate-600" x-text="q.explanation"></div>
+                          </template>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </template>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script type="module" src="/src/main.js"></script>

@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "cf-q1",
+      "type": "single",
+      "question": "Which repeats code?",
+      "options": [
+        "if",
+        "for",
+        "import"
+      ],
+      "correctIndex": 1,
+      "explanation": "for loops repeat."
+    },
+    {
+      "id": "cf-q2",
+      "type": "single",
+      "question": "Which keyword stops a loop?",
+      "options": [
+        "stop",
+        "break",
+        "exit"
+      ],
+      "correctIndex": 1,
+      "explanation": "`break` exits the closest loop."
+    },
+    {
+      "id": "cf-q3",
+      "type": "single",
+      "question": "Which skips to next iteration?",
+      "options": [
+        "skip",
+        "continue",
+        "next"
+      ],
+      "correctIndex": 1,
+      "explanation": "`continue` moves to next iteration."
+    },
+    {
+      "id": "cf-q4",
+      "type": "single",
+      "question": "What does `elif` do?",
+      "options": [
+        "Ends if",
+        "Additional condition",
+        "Loop"
+      ],
+      "correctIndex": 1,
+      "explanation": "`elif` provides another conditional branch."
+    },
+    {
+      "id": "cf-q5",
+      "type": "single",
+      "question": "Which constructs list comprehensions?",
+      "options": [
+        "[x for x in seq]",
+        "(x for x in seq)",
+        "{x for x in seq}"
+      ],
+      "correctIndex": 0,
+      "explanation": "List comprehension uses `[]`."
+    },
+    {
+      "id": "cf-q6",
+      "type": "single",
+      "question": "What does `enumerate()` provide?",
+      "options": [
+        "Indices and items",
+        "Only items",
+        "Only indices"
+      ],
+      "correctIndex": 0,
+      "explanation": "`enumerate()` yields (index, item)."
+    },
+    {
+      "id": "cf-q7",
+      "type": "single",
+      "question": "Which keyword handles exceptions?",
+      "options": [
+        "try",
+        "catch",
+        "handle"
+      ],
+      "correctIndex": 0,
+      "explanation": "`try` begins an exception block in Python."
+    },
+    {
+      "id": "cf-q8",
+      "type": "single",
+      "question": "Which operator is logical AND?",
+      "options": [
+        "&",
+        "and",
+        "&&"
+      ],
+      "correctIndex": 1,
+      "explanation": "`and` is Python's logical AND operator."
+    },
+    {
+      "id": "cf-q9",
+      "type": "single",
+      "question": "How to loop while condition?",
+      "options": [
+        "for",
+        "while",
+        "loop"
+      ],
+      "correctIndex": 1,
+      "explanation": "`while` loops while a condition is true."
+    },
+    {
+      "id": "cf-q10",
+      "type": "single",
+      "question": "Which built-in helps chain iterators?",
+      "options": [
+        "itertools.chain",
+        "chainit",
+        "concat"
+      ],
+      "correctIndex": 0,
+      "explanation": "`itertools.chain` concatenates iterators."
+    }
+  ]
+}

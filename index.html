@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Courseware – Vite + Tailwind + Alpine + HTMX</title>
+
+    <title>📚 Course Learning Platform</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="min-h-screen" x-data="demoCourseList">
+  <body class="min-h-screen" x-data="demoCourseList" x-init="init()">
     <header class="bg-slate-900 text-slate-50">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-baseline gap-3">
-        <h1 class="text-lg font-semibold tracking-tight">Courseware</h1>
+        <h1 class="text-lg font-semibold tracking-tight">📚 Course Learning Platform</h1>
         <p class="text-sm text-slate-300">
-          Vite + Tailwind CSS + Alpine.js + HTMX starter.
+          
         </p>
       </div>
     </header>
@@ -21,7 +22,7 @@
         <template x-for="course in courses" :key="course.id">
           <article
             class="bg-white shadow-sm rounded-lg border border-slate-200 p-4 flex flex-col justify-between hover:shadow-md hover:-translate-y-0.5 transition cursor-pointer"
-            @click="goToCourse(course.id)"
+            @click="goToCourse(course.slug)"
           >
             <div>
               <h3 class="text-base font-semibold mb-1" x-text="course.title"></h3>

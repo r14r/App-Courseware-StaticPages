@@ -1,0 +1,14 @@
+{
+  "questions": [
+    { "id": "stintro-q1", "type": "single", "question": "What does Streamlit do?", "options": ["Turns scripts into web apps","Runs C++","Starts servers"], "correctIndex": 0, "explanation": "Streamlit turns scripts into interactive apps." },
+    { "id": "stintro-q2", "type": "single", "question": "How to run a Streamlit app?", "options": ["streamlit start app.py","streamlit run app.py","python streamlit app.py"], "correctIndex": 1, "explanation": "Use `streamlit run app.py`." },
+    { "id": "stintro-q3", "type": "single", "question": "Which function displays text/data quickly?", "options": ["st.show()","st.write()","st.display()"], "correctIndex": 1, "explanation": "`st.write()` is flexible for many types." },
+    { "id": "stintro-q4", "type": "single", "question": "Which pip command installs Streamlit?", "options": ["pip get streamlit","pip install streamlit","pip add streamlit"], "correctIndex": 1, "explanation": "Use `pip install streamlit`." },
+    { "id": "stintro-q5", "type": "single", "question": "Which API creates a slider?", "options": ["st.slider()","st.range()","st.select()"], "correctIndex": 0, "explanation": "`st.slider()` creates sliders." },
+    { "id": "stintro-q6", "type": "single", "question": "Where does app state persist?", "options": ["session state","global variables","cookies"], "correctIndex": 0, "explanation": "Use session state for per-user state." },
+    { "id": "stintro-q7", "type": "single", "question": "Which function adds a sidebar?", "options": ["st.sidebar","st.side","st.aside"], "correctIndex": 0, "explanation": "`st.sidebar` holds sidebar helpers." },
+    { "id": "stintro-q8", "type": "single", "question": "Which method caches results?", "options": ["st.cache","st.memo","Both"], "correctIndex": 2, "explanation": "Newer APIs include `st.cache` and `st.memo` patterns." },
+    { "id": "stintro-q9", "type": "single", "question": "Which file extension is typical for Streamlit apps?", "options": [".stream",".py",".st"], "correctIndex": 1, "explanation": "Streamlit apps are Python scripts `.py`." },
+    { "id": "stintro-q10", "type": "single", "question": "Which is a good next step after Hello World?", "options": ["Add widgets","Rewrite in JS","Remove widgets"], "correctIndex": 0, "explanation": "Add interactivity with widgets." }
+  ]
+}

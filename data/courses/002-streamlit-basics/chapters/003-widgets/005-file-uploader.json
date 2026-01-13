@@ -1,0 +1,5 @@
+{
+  "id": "t5",
+  "title": "File uploader",
+  "contentHtml": "<p>st.file_uploader() to upload files.</p>"
+}

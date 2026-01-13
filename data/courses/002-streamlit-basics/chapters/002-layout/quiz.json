@@ -1,0 +1,14 @@
+{
+  "questions": [
+    { "id": "layout-q1", "type": "single", "question": "Which function creates columns?", "options": ["st.columns()","st.block()","st.sidebar()"], "correctIndex": 0, "explanation": "st.columns() creates columns." },
+    { "id": "layout-q2", "type": "single", "question": "Which object holds sidebar helpers?", "options": ["st.side","st.sidebar","st.aside"], "correctIndex": 1, "explanation": "`st.sidebar` provides sidebar helpers." },
+    { "id": "layout-q3", "type": "single", "question": "Which creates an expander?", "options": ["st.expand()","st.expander()","st.fold()"], "correctIndex": 1, "explanation": "Use `st.expander()` for collapsible blocks." },
+    { "id": "layout-q4", "type": "single", "question": "Which is used for headings?", "options": ["st.title()","st.head()","st.heading()"], "correctIndex": 0, "explanation": "`st.title()` adds a main title." },
+    { "id": "layout-q5", "type": "single", "question": "How to put widgets in a column?", "options": ["with st.columns():","st.col().add()","st.column()"], "correctIndex": 0, "explanation": "Use `with` or assignment from `st.columns()`." },
+    { "id": "layout-q6", "type": "single", "question": "Which helps group items?", "options": ["st.container()","st.group()","st.bundle()"], "correctIndex": 0, "explanation": "`st.container()` groups elements." },
+    { "id": "layout-q7", "type": "single", "question": "Where to place global controls?", "options": ["Main area","Sidebar","Footer"], "correctIndex": 1, "explanation": "Sidebar is good for global controls." },
+    { "id": "layout-q8", "type": "single", "question": "How to add spacing?", "options": ["st.space()","st.markdown('')","Add empty elements or markdown"], "correctIndex": 2, "explanation": "Use empty markdown or layout helpers for spacing." },
+    { "id": "layout-q9", "type": "single", "question": "Which supports responsive columns?", "options": ["st.columns()","st.rows()","st.grid()"], "correctIndex": 0, "explanation": "`st.columns()` helps create responsive column layouts." },
+    { "id": "layout-q10", "type": "single", "question": "Where to put large visualizations?", "options": ["Sidebar","Main area","Hidden"], "correctIndex": 1, "explanation": "Main area is suitable for large visuals." }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  "001-if-statements.json",
+  "002-for-loops.json",
+  "003-while-loops.json",
+  "004-break-and-continue.json",
+  "005-comprehensions.json",
+  "006-try-except-basics.json",
+  "007-boolean-expressions.json",
+  "008-itertools-intro.json",
+  "009-enumerate-and-zip.json",
+  "010-best-practices.json"
+]

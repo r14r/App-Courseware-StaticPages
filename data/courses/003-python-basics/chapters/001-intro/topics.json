@@ -1,0 +1,12 @@
+[
+  "001-what-is-python.json",
+  "002-installing-python.json",
+  "003-running-scripts.json",
+  "004-indentation.json",
+  "005-printing.json",
+  "006-variables-basics.json",
+  "007-comments.json",
+  "008-virtual-environments.json",
+  "009-package-management.json",
+  "010-next-steps.json"
+]

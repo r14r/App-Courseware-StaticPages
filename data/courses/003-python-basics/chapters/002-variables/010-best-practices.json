@@ -1,0 +1,5 @@
+{
+  "id": "t10",
+  "title": "Best practices",
+  "contentHtml": "<p>Name variables clearly and avoid single-letter names except in loops.</p>"
+}

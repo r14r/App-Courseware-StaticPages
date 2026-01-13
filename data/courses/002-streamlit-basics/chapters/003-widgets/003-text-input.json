@@ -1,0 +1,5 @@
+{
+  "id": "t3",
+  "title": "Text input",
+  "contentHtml": "<p>st.text_input() captures text from users.</p>"
+}

@@ -1,0 +1,12 @@
+[
+  "001-file-ownership.json",
+  "002-file-permissions.json",
+  "003-changing-permissions.json",
+  "004-changing-ownership.json",
+  "005-editing-files.json",
+  "006-file-types.json",
+  "007-symbolic-links.json",
+  "008-permissions-numeric-mode.json",
+  "009-sticky-setuid.json",
+  "010-safe-editing.json"
+]

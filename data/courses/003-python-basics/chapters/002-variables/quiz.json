@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "var-q1",
+      "type": "single",
+      "question": "Which is valid assignment?",
+      "options": [
+        "x = 10",
+        "10 = x",
+        "var: 10"
+      ],
+      "correctIndex": 0,
+      "explanation": "Left-hand side must be a variable."
+    },
+    {
+      "id": "var-q2",
+      "type": "single",
+      "question": "Which is a string literal?",
+      "options": [
+        "hello",
+        "\"hello\"",
+        "hello()"
+      ],
+      "correctIndex": 1,
+      "explanation": "Strings are quoted with quotes."
+    },
+    {
+      "id": "var-q3",
+      "type": "single",
+      "question": "How to convert to int?",
+      "options": [
+        "int('3')",
+        "toInt('3')",
+        "parseInt('3')"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use `int()` to convert to integer."
+    },
+    {
+      "id": "var-q4",
+      "type": "single",
+      "question": "Which is mutable?",
+      "options": [
+        "tuple",
+        "list",
+        "string"
+      ],
+      "correctIndex": 1,
+      "explanation": "Lists are mutable."
+    },
+    {
+      "id": "var-q5",
+      "type": "single",
+      "question": "Which is a valid identifier?",
+      "options": [
+        "1var",
+        "var_name",
+        "var-name"
+      ],
+      "correctIndex": 1,
+      "explanation": "Identifiers cannot start with a digit and cannot contain `-`."
+    },
+    {
+      "id": "var-q6",
+      "type": "single",
+      "question": "How to assign multiple variables?",
+      "options": [
+        "a = b = 1",
+        "a, b = 1, 2",
+        "Both"
+      ],
+      "correctIndex": 2,
+      "explanation": "Both forms are valid in different scenarios."
+    },
+    {
+      "id": "var-q7",
+      "type": "single",
+      "question": "What does `None` represent?",
+      "options": [
+        "Zero",
+        "Empty string",
+        "Null / no value"
+      ],
+      "correctIndex": 2,
+      "explanation": "`None` represents absence of a value."
+    },
+    {
+      "id": "var-q8",
+      "type": "single",
+      "question": "Which built-in gets type of value?",
+      "options": [
+        "type()",
+        "kind()",
+        "class()"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use `type()` to inspect the type."
+    },
+    {
+      "id": "var-q9",
+      "type": "single",
+      "question": "Convention for constants?",
+      "options": [
+        "lowercase",
+        "UPPERCASE",
+        "CamelCase"
+      ],
+      "correctIndex": 1,
+      "explanation": "Constants are often named in uppercase."
+    },
+    {
+      "id": "var-q10",
+      "type": "single",
+      "question": "Scope: variable inside function is?",
+      "options": [
+        "Global",
+        "Local",
+        "Module"
+      ],
+      "correctIndex": 1,
+      "explanation": "Variables defined in a function are local by default."
+    }
+  ]
+}
