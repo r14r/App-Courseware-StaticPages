@@ -164,7 +164,8 @@ document.addEventListener('alpine:init', () => {
           if (data && data.questions && Array.isArray(data.questions)) {
             this.quiz = data;
             this.answers = {};
-            this.quizState = 'not-started';
+            // show quiz immediately when the quiz topic is opened
+            this.quizState = 'in-progress';
             this.chapterContentHtml = '';
             this.chapterTitle = (data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title)) || '';
           } else {
