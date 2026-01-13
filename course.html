@@ -66,18 +66,7 @@
 
               <article>
                 <h3 class="h6" x-text="chapterTitle || chapters[selectedChapterIndex]?.title || ''"></h3>
-                <div class="mt-3" x-show="!showOnlyTopic && topics && topics.length">
-                  <h4 class="fw-semibold">Topics</h4>
-                  <ul class="list-group mb-3">
-                    <template x-for="(t, tidx) in topics" :key="t.file || t">
-                      <li class="list-group-item">
-                        <button class="btn btn-link p-0" @click="loadTopic(tidx)">
-                          <span x-text="(t.title || (t.file||t).replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' '))"></span>
-                        </button>
-                      </li>
-                    </template>
-                  </ul>
-                </div>
+                <!-- topics are shown in the sidebar accordion; removed from main content -->
 
                 <div x-show="showOnlyTopic">
                   <div class="d-flex justify-content-between align-items-start mb-2">
