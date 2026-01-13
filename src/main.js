@@ -149,8 +149,19 @@ document.addEventListener('alpine:init', () => {
       const fname = (typeof topicEntry === 'string') ? topicEntry : (topicEntry && topicEntry.file) ? topicEntry.file : topicEntry;
       if (this.topicCache[fname]) {
         const t = this.topicCache[fname];
-        this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
-        this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        // If cached entry is a quiz, restore quiz state
+        if (t && t.questions && Array.isArray(t.questions)) {
+          this.quiz = t;
+          this.answers = {};
+          this.quizState = 'in-progress';
+          this.chapterContentHtml = '';
+          this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        } else {
+          this.quiz = null;
+          this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
+          this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        }
+        this.showOnlyTopic = true;
         return;
       }
       // Try flattened path first, then legacy chapters/ path
