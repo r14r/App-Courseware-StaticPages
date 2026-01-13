@@ -39,6 +39,11 @@ document.addEventListener('alpine:init', () => {
     goToCourse(slug) {
       window.location.href = `/course.html?id=${encodeURIComponent(slug)}`;
     },
+    handleImageError(e, title) {
+      e.target.onerror = null;
+      const txt = encodeURIComponent(title || 'Course');
+      e.target.src = `https://via.placeholder.com/600x350?text=${txt}`;
+    },
   }));
 
   Alpine.data('demoCourseView', () => ({
@@ -147,6 +152,13 @@ document.addEventListener('alpine:init', () => {
       this.selectedTopicIndex = tidx;
       const topicEntry = this.topics[tidx];
       const fname = (typeof topicEntry === 'string') ? topicEntry : (topicEntry && topicEntry.file) ? topicEntry.file : topicEntry;
+      if (this.topicCache[fname]) {
+        // If quiz is cached but missing its questions for some reason, clear cache and re-fetch
+        const cached = this.topicCache[fname];
+        if (fname.toLowerCase().endsWith('quiz.json') && !(cached && cached.questions && Array.isArray(cached.questions))) {
+          delete this.topicCache[fname];
+        }
+      }
       if (this.topicCache[fname]) {
         const t = this.topicCache[fname];
         // If cached entry is a quiz, restore quiz state
