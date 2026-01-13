@@ -1,5 +1,6 @@
 // src/main.js
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import Alpine from 'alpinejs';
 import 'htmx.org';

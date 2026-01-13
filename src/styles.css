@@ -1,7 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+/* Minimal styles now that Bootstrap is used */
 body {
-  @apply bg-slate-100 text-slate-900;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.prose {
+  line-height: 1.6;
 }
