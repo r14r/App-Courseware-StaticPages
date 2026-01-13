@@ -54,6 +54,7 @@ document.addEventListener('alpine:init', () => {
     quiz: null,
     answers: {},
     quizState: 'not-started', // not-started | in-progress | completed
+    showOnlyTopic: false,
 
     async init() {
       const params = new URLSearchParams(window.location.search);
@@ -116,6 +117,7 @@ document.addEventListener('alpine:init', () => {
       if (topicsIndex && Array.isArray(topicsIndex) && topicsIndex.length) {
         this.topics = topicsIndex.slice();
         this.selectedTopicIndex = 0;
+        this.showOnlyTopic = false; // when explicitly loading a chapter, show the topics list by default
         await this.loadTopic(this.selectedTopicIndex);
       } else {
         // Fallback to single content.json (check flattened then legacy)
@@ -160,6 +162,7 @@ document.addEventListener('alpine:init', () => {
         this.topicCache[fname] = data;
         this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
         this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        this.showOnlyTopic = true; // when loading a specific topic, show only that topic in the main view
       } else {
         this.chapterContentHtml = '<p>No content.</p>';
         this.chapterTitle = chapter.title || '';
