@@ -42,7 +42,7 @@ document.addEventListener('alpine:init', () => {
     handleImageError(e, title) {
       e.target.onerror = null;
       const txt = encodeURIComponent(title || 'Course');
-      e.target.src = `https://via.placeholder.com/600x350?text=${txt}`;
+      e.target.src = `https://placehold.co/600x350?text=${txt}`;
     },
   }));
 
@@ -136,11 +136,8 @@ document.addEventListener('alpine:init', () => {
         this.chapterTitle = chapter.title || '';
       }
 
-      let quiz = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/quiz.json`);
-      if (!quiz) {
-        quiz = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/quiz.json`);
-      }
-      this.quiz = quiz && quiz.questions ? quiz : null;
+      // keep quiz data available on dedicated quiz page; do not load quiz inline here
+      this.quiz = null;
       this.answers = {};
       this.quizState = 'not-started';
     },
@@ -161,18 +158,15 @@ document.addEventListener('alpine:init', () => {
       }
       if (this.topicCache[fname]) {
         const t = this.topicCache[fname];
-        // If cached entry is a quiz, restore quiz state
+        // If cached entry is a quiz, redirect to quiz page
         if (t && t.questions && Array.isArray(t.questions)) {
-          this.quiz = t;
-          this.answers = {};
-          this.quizState = 'in-progress';
-          this.chapterContentHtml = '';
-          this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
-        } else {
-          this.quiz = null;
-          this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
-          this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+          window.location.href = `/quiz.html?id=${encodeURIComponent(this.slug)}&chapter=${encodeURIComponent(chapter.id)}`;
+          return;
         }
+        // regular cached topic
+        this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
+        this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        this.quiz = null;
         this.showOnlyTopic = true;
         return;
       }
@@ -183,22 +177,17 @@ document.addEventListener('alpine:init', () => {
       }
       if (data) {
         this.topicCache[fname] = data;
-          // If the loaded file is a quiz (contains questions), treat it as the chapter quiz
-          if (data && data.questions && Array.isArray(data.questions)) {
-            this.quiz = data;
-            this.answers = {};
-            // show quiz immediately when the quiz topic is opened
-            this.quizState = 'in-progress';
-            this.chapterContentHtml = '';
-            this.chapterTitle = (data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title)) || '';
-          } else {
-            // regular topic content
-            this.quiz = null;
-            this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
-            this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
-          }
-          // when loading a specific topic, show only that topic in the main view
-          this.showOnlyTopic = true;
+        // If the loaded file is a quiz (contains questions), redirect to quiz page
+        if (data && data.questions && Array.isArray(data.questions)) {
+          window.location.href = `/quiz.html?id=${encodeURIComponent(this.slug)}&chapter=${encodeURIComponent(chapter.id)}`;
+          return;
+        }
+        // regular topic content
+        this.quiz = null;
+        this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
+        this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
+        // when loading a specific topic, show only that topic in the main view
+        this.showOnlyTopic = true;
       } else {
         this.chapterContentHtml = '<p>No content.</p>';
         this.chapterTitle = chapter.title || '';
