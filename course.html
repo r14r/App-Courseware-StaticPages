@@ -25,13 +25,30 @@
             <ul class="space-y-2">
               <template x-for="(ch, idx) in chapters" :key="ch.id">
                 <li>
-                  <button
-                    class="w-full text-left px-2 py-2 rounded hover:bg-slate-50"
-                    :class="{'bg-slate-50': selectedChapterIndex === idx}"
-                    @click="loadChapter(idx)"
-                  >
-                    <div class="text-sm font-medium" x-text="(idx+1) + '. ' + ch.title"></div>
-                  </button>
+                  <div>
+                    <button
+                      class="w-full text-left px-2 py-2 rounded hover:bg-slate-50"
+                      :class="{'bg-slate-50': selectedChapterIndex === idx}"
+                      @click="loadChapter(idx)"
+                    >
+                      <div class="text-sm font-medium" x-text="(idx+1) + '. ' + ch.title"></div>
+                    </button>
+                    <template x-if="ch.topics && ch.topics.length">
+                      <ul class="pl-4 mt-1 space-y-1">
+                        <template x-for="(t, tidx) in ch.topics" :key="t.file || t">
+                          <li>
+                            <button
+                              class="w-full text-left px-2 py-1 rounded text-sm hover:bg-slate-50"
+                              :class="{'bg-slate-100': selectedChapterIndex === idx && selectedTopicIndex === tidx}"
+                              @click="loadChapter(idx).then(()=>loadTopic(tidx))"
+                            >
+                              <span x-text="(t.title || (t.file||t).replace(/^\\d+-|\\.json$/g,'').replace(/-/g,' '))"></span>
+                            </button>
+                          </li>
+                        </template>
+                      </ul>
+                    </template>
+                  </div>
                 </li>
               </template>
             </ul>

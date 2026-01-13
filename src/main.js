@@ -69,7 +69,36 @@ document.addEventListener('alpine:init', () => {
         return;
       }
       this.course = course;
-      this.chapters = course.chapters || [];
+      // Normalize chapters and try to prefetch topics index for each chapter so sidebar can show topics
+      const rawCh = course.chapters || [];
+      const normalized = [];
+      for (const ch of rawCh) {
+        const chapter = Object.assign({}, ch);
+        // try flattened then legacy topics.json
+        let topicsIndex = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/topics.json`);
+        if (!topicsIndex) {
+          topicsIndex = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/topics.json`);
+        }
+        if (Array.isArray(topicsIndex)) {
+          // normalize entries to objects {file, title}
+          chapter.topics = topicsIndex.map(entry => {
+            if (typeof entry === 'string') {
+              const file = entry;
+              const title = file.replace(/^\d+-|\.json$/g, '').replace(/-/g, ' ')
+                .replace(/\b\w/g, s => s.toUpperCase());
+              return { file, title };
+            }
+            // assume object with file and optional title
+            const file = entry.file || entry.filename || String(entry);
+            const title = entry.title || (file.replace(/^\d+-|\.json$/g, '').replace(/-/g, ' ').replace(/\b\w/g, s => s.toUpperCase()));
+            return { file, title };
+          });
+        } else {
+          chapter.topics = [];
+        }
+        normalized.push(chapter);
+      }
+      this.chapters = normalized;
     },
 
     async loadChapter(idx) {
@@ -113,11 +142,12 @@ document.addEventListener('alpine:init', () => {
       if (!chapter) return;
       if (tidx < 0 || tidx >= this.topics.length) return;
       this.selectedTopicIndex = tidx;
-      const fname = this.topics[tidx];
+      const topicEntry = this.topics[tidx];
+      const fname = (typeof topicEntry === 'string') ? topicEntry : (topicEntry && topicEntry.file) ? topicEntry.file : topicEntry;
       if (this.topicCache[fname]) {
         const t = this.topicCache[fname];
         this.chapterContentHtml = t.contentHtml || '<p>No content.</p>';
-        this.chapterTitle = t.title || chapter.title || '';
+        this.chapterTitle = t.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
         return;
       }
       // Try flattened path first, then legacy chapters/ path
@@ -128,7 +158,7 @@ document.addEventListener('alpine:init', () => {
       if (data) {
         this.topicCache[fname] = data;
         this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
-        this.chapterTitle = data.title || chapter.title || '';
+        this.chapterTitle = data.title || ((typeof topicEntry === 'object' && topicEntry.title) ? topicEntry.title : chapter.title) || '';
       } else {
         this.chapterContentHtml = '<p>No content.</p>';
         this.chapterTitle = chapter.title || '';
