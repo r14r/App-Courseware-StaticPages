@@ -77,22 +77,32 @@ document.addEventListener('alpine:init', () => {
       this.selectedChapterIndex = idx;
       const chapter = this.chapters[idx];
 
-      // Try topic-based structure first
-      const topicsIndex = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/topics.json`);
+      // Try topic-based structure first. Support flattened layout (/course/<chapter>/...) and
+      // legacy layout (/course/chapters/<chapter>/...). Try flattened first, then fallback.
+      let topicsIndex = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/topics.json`);
+      if (!topicsIndex) {
+        topicsIndex = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/topics.json`);
+      }
       if (topicsIndex && Array.isArray(topicsIndex) && topicsIndex.length) {
         this.topics = topicsIndex.slice();
         this.selectedTopicIndex = 0;
         await this.loadTopic(this.selectedTopicIndex);
       } else {
-        // Fallback to single content.json
+        // Fallback to single content.json (check flattened then legacy)
         this.topics = [];
         this.selectedTopicIndex = 0;
-        const content = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/content.json`);
+        let content = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/content.json`);
+        if (!content) {
+          content = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/content.json`);
+        }
         this.chapterContentHtml = (content && content.contentHtml) ? content.contentHtml : '<p>No content.</p>';
         this.chapterTitle = chapter.title || '';
       }
 
-      const quiz = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/quiz.json`);
+      let quiz = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/quiz.json`);
+      if (!quiz) {
+        quiz = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/quiz.json`);
+      }
       this.quiz = quiz && quiz.questions ? quiz : null;
       this.answers = {};
       this.quizState = 'not-started';
@@ -110,7 +120,11 @@ document.addEventListener('alpine:init', () => {
         this.chapterTitle = t.title || chapter.title || '';
         return;
       }
-      const data = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/${fname}`);
+      // Try flattened path first, then legacy chapters/ path
+      let data = await fetchJson(`/data/courses/${this.slug}/${chapter.id}/${fname}`);
+      if (!data) {
+        data = await fetchJson(`/data/courses/${this.slug}/chapters/${chapter.id}/${fname}`);
+      }
       if (data) {
         this.topicCache[fname] = data;
         this.chapterContentHtml = data.contentHtml || '<p>No content.</p>';
