@@ -20,7 +20,7 @@
         <template x-for="course in courses" :key="course.id">
           <div class="col-12 col-sm-6 col-lg-4">
             <div class="card h-100 shadow-sm" style="cursor:pointer;" @click="goToCourse(course.slug)">
-              <img :src="'/assets/' + course.slug + '.jpg'" class="card-img-top" alt="" @error="handleImageError($event, course.title)">
+              <img :src="'/assets/' + course.slug + '.svg'" class="card-img-top" alt="" @error="handleImageError($event, course.title)">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title" x-text="course.title"></h5>
                 <p class="card-text text-muted mb-4" x-text="course.description"></p>
