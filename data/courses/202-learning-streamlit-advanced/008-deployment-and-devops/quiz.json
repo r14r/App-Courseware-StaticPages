@@ -1,0 +1,89 @@
+{
+  "id": "deployment-and-devops-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about dockerizing streamlit is most accurate?",
+        "choices": [
+          "Dockerizing Streamlit always requires external services to work in Streamlit.",
+          "Dockerizing Streamlit is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Dockerizing Streamlit is deprecated and should be avoided in all Streamlit apps.",
+          "Dockerizing Streamlit only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Dockerizing Streamlit is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about kubernetes & autoscaling is most accurate?",
+        "choices": [
+          "Kubernetes & Autoscaling always requires external services to work in Streamlit.",
+          "Kubernetes & Autoscaling is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Kubernetes & Autoscaling is deprecated and should be avoided in all Streamlit apps.",
+          "Kubernetes & Autoscaling only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Kubernetes & Autoscaling is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about streamlit community cloud is most accurate?",
+        "choices": [
+          "Streamlit Community Cloud always requires external services to work in Streamlit.",
+          "Streamlit Community Cloud is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Streamlit Community Cloud is deprecated and should be avoided in all Streamlit apps.",
+          "Streamlit Community Cloud only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Streamlit Community Cloud is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about streamlit community cloud is most accurate?",
+        "choices": [
+          "Streamlit Community Cloud always requires external services to work in Streamlit.",
+          "Streamlit Community Cloud is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Streamlit Community Cloud is deprecated and should be avoided in all Streamlit apps.",
+          "Streamlit Community Cloud only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Streamlit Community Cloud is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about ci/cd pipelines is most accurate?",
+        "choices": [
+          "CI/CD Pipelines always requires external services to work in Streamlit.",
+          "CI/CD Pipelines is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "CI/CD Pipelines is deprecated and should be avoided in all Streamlit apps.",
+          "CI/CD Pipelines only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "CI/CD Pipelines is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Deployment and DevOps', which statement about streamlit community cloud is most accurate?",
+        "choices": [
+          "Streamlit Community Cloud always requires external services to work in Streamlit.",
+          "Streamlit Community Cloud is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Streamlit Community Cloud is deprecated and should be avoided in all Streamlit apps.",
+          "Streamlit Community Cloud only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Streamlit Community Cloud is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

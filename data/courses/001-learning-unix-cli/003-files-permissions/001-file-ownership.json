@@ -1,0 +1,9 @@
+{
+  "id": "c3t001",
+  "title": "File Ownership",
+  "content": [
+    "<h2>Owner and group</h2><p>Every file has an <strong>owner</strong> (a user) and a <strong>group</strong>. Ownership affects permissions and access control.</p>",
+    "<h2>View ownership</h2><pre><code class=\"language-bash\">ls -l\n# owner and group appear in the long listing\n</code></pre>",
+    "<h2>Why it matters</h2><ul><li>Systems are multi-user; ownership separates responsibilities</li><li>Services run under specific users/groups</li><li>Shared group folders enable collaboration</li></ul>"
+  ]
+}

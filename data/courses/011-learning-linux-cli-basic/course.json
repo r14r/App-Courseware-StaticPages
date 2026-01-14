@@ -1,0 +1,19 @@
+{
+  "id": "learning-linux-cli",
+  "title": "Learning Linux Command Line",
+  "description": "A beginner-friendly introduction to the Linux terminal, shell navigation, file operations, and permissions.",
+  "chapters": [
+    {
+      "id": "001-intro",
+      "title": "Introduction to the Linux Shell"
+    },
+    {
+      "id": "002-navigation",
+      "title": "Navigating the Filesystem"
+    },
+    {
+      "id": "003-files-permissions",
+      "title": "Files, Editing, and Permissions"
+    }
+  ]
+}

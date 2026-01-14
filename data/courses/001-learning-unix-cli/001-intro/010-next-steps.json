@@ -1,0 +1,9 @@
+{
+  "id": "c1t010",
+  "title": "Next Steps",
+  "content": [
+    "<h2>Build habits that scale</h2><ul><li>Always work in a dedicated practice directory</li><li>Prefer <code>man</code> pages and <code>--help</code></li><li>Use tab completion and history search</li><li>Learn to inspect before you modify (e.g., <code>ls</code>, <code>cat</code>, <code>stat</code>)</li></ul>",
+    "<h2>Suggested tools to learn next</h2><ul><li>Search: <code>find</code>, <code>grep</code></li><li>Text processing: <code>sort</code>, <code>uniq</code>, <code>cut</code>, <code>awk</code>, <code>sed</code></li><li>Processes: <code>ps</code>, <code>top</code>, <code>kill</code></li><li>Networking: <code>ssh</code>, <code>curl</code></li></ul>",
+    "<h2>Mini-project</h2><p>Create a folder, generate a few files, and write a one-line pipeline that counts how many lines contain a keyword.</p><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p mini\nprintf \"one\\nerror\\ntwo\\nerror\\n\" &gt; mini/app.log\ncat mini/app.log | grep -n \"error\" | wc -l\n</code></pre>"
+  ]
+}

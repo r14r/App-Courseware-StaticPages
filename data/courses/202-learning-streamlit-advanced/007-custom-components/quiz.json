@@ -1,0 +1,89 @@
+{
+  "id": "custom-components-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about react component basics is most accurate?",
+        "choices": [
+          "React Component Basics always requires external services to work in Streamlit.",
+          "React Component Basics is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "React Component Basics is deprecated and should be avoided in all Streamlit apps.",
+          "React Component Basics only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "React Component Basics is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about advanced ui widgets is most accurate?",
+        "choices": [
+          "Advanced UI Widgets always requires external services to work in Streamlit.",
+          "Advanced UI Widgets is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Advanced UI Widgets is deprecated and should be avoided in all Streamlit apps.",
+          "Advanced UI Widgets only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Advanced UI Widgets is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about packaging & versioning components is most accurate?",
+        "choices": [
+          "Packaging & Versioning Components always requires external services to work in Streamlit.",
+          "Packaging & Versioning Components is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Packaging & Versioning Components is deprecated and should be avoided in all Streamlit apps.",
+          "Packaging & Versioning Components only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Packaging & Versioning Components is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about bidirectional data exchange is most accurate?",
+        "choices": [
+          "Bidirectional Data Exchange always requires external services to work in Streamlit.",
+          "Bidirectional Data Exchange is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Bidirectional Data Exchange is deprecated and should be avoided in all Streamlit apps.",
+          "Bidirectional Data Exchange only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Bidirectional Data Exchange is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about bidirectional data exchange is most accurate?",
+        "choices": [
+          "Bidirectional Data Exchange always requires external services to work in Streamlit.",
+          "Bidirectional Data Exchange is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Bidirectional Data Exchange is deprecated and should be avoided in all Streamlit apps.",
+          "Bidirectional Data Exchange only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Bidirectional Data Exchange is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Custom Components', which statement about react component basics is most accurate?",
+        "choices": [
+          "React Component Basics always requires external services to work in Streamlit.",
+          "React Component Basics is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "React Component Basics is deprecated and should be avoided in all Streamlit apps.",
+          "React Component Basics only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "React Component Basics is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

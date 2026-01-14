@@ -1,0 +1,10 @@
+{
+  "id": "c2t006",
+  "title": "Finding Files",
+  "content": [
+    "<h2>find</h2><p><code>find</code> searches by walking directories and evaluating predicates.</p><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nfind . -type f -name \"*.json\"\nfind . -type d -name \"*demo*\"\n</code></pre>",
+    "<h2>Common predicates</h2><ul><li><code>-type f</code> file, <code>-type d</code> directory</li><li><code>-name</code> / <code>-iname</code> pattern match</li><li><code>-mtime</code> modified N days ago</li><li><code>-size</code> filter by size</li></ul>",
+    "<h2>locate</h2><p><code>locate</code> is fast but depends on an index database (may not be enabled everywhere).</p><pre><code class=\"language-bash\">locate passwd | head\n</code></pre>",
+    "<h2>Practice</h2><pre><code class=\"language-bash\">mkdir -p ~/unix-cli-practice/find-demo/a/b\ntouch ~/unix-cli-practice/find-demo/a/b/test.txt\ncd ~/unix-cli-practice/find-demo\nfind . -type f -name \"*.txt\"\n</code></pre>"
+  ]
+}

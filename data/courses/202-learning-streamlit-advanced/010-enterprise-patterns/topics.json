@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-design-systems-in-streamlit.json",
+    "title": "Design Systems in Streamlit"
+  },
+  {
+    "file": "002-data-access-layers.json",
+    "title": "Data Access Layers"
+  },
+  {
+    "file": "003-feature-flags-a-b-tests.json",
+    "title": "Feature Flags & A/B Tests"
+  },
+  {
+    "file": "004-localization-i18n.json",
+    "title": "Localization & i18n"
+  },
+  {
+    "file": "005-offline-first-patterns.json",
+    "title": "Offline-first Patterns"
+  },
+  {
+    "file": "006-governance-change-control.json",
+    "title": "Governance & Change Control"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

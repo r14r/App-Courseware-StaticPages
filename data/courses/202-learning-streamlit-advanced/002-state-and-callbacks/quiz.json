@@ -1,0 +1,89 @@
+{
+  "id": "state-and-callbacks-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about callback orchestration is most accurate?",
+        "choices": [
+          "Callback Orchestration always requires external services to work in Streamlit.",
+          "Callback Orchestration is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Callback Orchestration is deprecated and should be avoided in all Streamlit apps.",
+          "Callback Orchestration only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Callback Orchestration is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about callback orchestration is most accurate?",
+        "choices": [
+          "Callback Orchestration always requires external services to work in Streamlit.",
+          "Callback Orchestration is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Callback Orchestration is deprecated and should be avoided in all Streamlit apps.",
+          "Callback Orchestration only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Callback Orchestration is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about undo/redo and history is most accurate?",
+        "choices": [
+          "Undo/Redo and History always requires external services to work in Streamlit.",
+          "Undo/Redo and History is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Undo/Redo and History is deprecated and should be avoided in all Streamlit apps.",
+          "Undo/Redo and History only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Undo/Redo and History is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about session state patterns is most accurate?",
+        "choices": [
+          "Session State Patterns always requires external services to work in Streamlit.",
+          "Session State Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Session State Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Session State Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Session State Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about undo/redo and history is most accurate?",
+        "choices": [
+          "Undo/Redo and History always requires external services to work in Streamlit.",
+          "Undo/Redo and History is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Undo/Redo and History is deprecated and should be avoided in all Streamlit apps.",
+          "Undo/Redo and History only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Undo/Redo and History is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'State and Callbacks', which statement about undo/redo and history is most accurate?",
+        "choices": [
+          "Undo/Redo and History always requires external services to work in Streamlit.",
+          "Undo/Redo and History is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Undo/Redo and History is deprecated and should be avoided in all Streamlit apps.",
+          "Undo/Redo and History only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Undo/Redo and History is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

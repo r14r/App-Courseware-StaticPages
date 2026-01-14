@@ -1,0 +1,19 @@
+{
+  "id": "learning-linux-cli-expert",
+  "title": "Learning Linux Command Line (Expert)",
+  "description": "An expert-level Linux CLI course with production-grade techniques, diagnostics, and system control.",
+  "chapters": [
+    {
+      "id": "001-intro",
+      "title": "Introduction to the Linux Shell"
+    },
+    {
+      "id": "002-navigation",
+      "title": "Navigating the Filesystem"
+    },
+    {
+      "id": "003-files-permissions",
+      "title": "Files, Editing, and Permissions"
+    }
+  ]
+}

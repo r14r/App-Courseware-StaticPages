@@ -1,0 +1,11 @@
+{
+  "id": "c1t001",
+  "title": "What Is the Shell?",
+  "content": [
+    "<h2>Definition</h2><p>The <strong>shell</strong> is a program that reads commands you type and runs other programs. It is the command interpreter between you and the operating system.</p><p>Common shells include <code>sh</code>, <code>bash</code>, <code>zsh</code>, and <code>fish</code>. On many modern macOS systems the default is <code>zsh</code>; on many Linux systems it is <code>bash</code> (or another POSIX shell).</p>",
+    "<h2>Terminal vs Shell</h2><ul><li><strong>Terminal</strong>: the application window that displays text and sends your keystrokes.</li><li><strong>Shell</strong>: the program running inside the terminal that interprets and executes commands.</li></ul>",
+    "<h2>How the shell runs a command</h2><ol><li>Parse your input (split into command + arguments)</li><li>Expand variables (e.g., <code>$HOME</code>) and globs (e.g., <code>*.txt</code>)</li><li>Search for the executable in <code>$PATH</code></li><li>Start a process and connect input/output streams</li></ol>",
+    "<h2>First commands</h2><pre><code class=\"language-bash\">pwd\nls\necho \"Hello UNIX\"\nwhoami\necho \"$SHELL\"\n</code></pre>",
+    "<h2>Key idea: composition</h2><p>UNIX tools are designed to be combined. You will frequently chain tools together with pipes and redirection.</p>"
+  ]
+}

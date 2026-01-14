@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-altair-advanced-interactions.json",
+    "title": "Altair Advanced Interactions"
+  },
+  {
+    "file": "002-plotly-streamlit-patterns.json",
+    "title": "Plotly + Streamlit Patterns"
+  },
+  {
+    "file": "003-matplotlib-pyplot-tips.json",
+    "title": "Matplotlib & Pyplot Tips"
+  },
+  {
+    "file": "004-aggrid-data-editor-power-use.json",
+    "title": "AgGrid / Data Editor Power-Use"
+  },
+  {
+    "file": "005-crossfiltering-techniques.json",
+    "title": "Crossfiltering Techniques"
+  },
+  {
+    "file": "006-exporting-charts-and-data.json",
+    "title": "Exporting Charts and Data"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "id": "c1quiz",
+  "title": "Quiz",
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "Terminal vs shell: which statement is correct?",
+        "choices": [
+          "Terminal = command interpreter; shell = window",
+          "Terminal = window/emulator; shell = command interpreter",
+          "Terminal = package manager; shell = editor",
+          "Terminal = filesystem; shell = permission model"
+        ],
+        "answerIndex": 1,
+        "explanation": "A terminal is the UI/emulator; the shell interprets commands."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "What does PATH primarily determine?",
+        "choices": [
+          "Which files you can read",
+          "Where the shell looks for executables",
+          "How pipes connect commands",
+          "How much disk space you have"
+        ],
+        "answerIndex": 1,
+        "explanation": "PATH is a list of directories searched to locate commands."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "What is the difference between > and >>?",
+        "choices": [
+          "> appends, >> overwrites",
+          "> overwrites, >> appends",
+          "Both overwrite",
+          "Both append"
+        ],
+        "answerIndex": 1,
+        "explanation": "> overwrites a file, >> appends to it."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "A pipe | connects...",
+        "choices": [
+          "stdin of the first command to stderr of the second",
+          "stdout of the first command to stdin of the second",
+          "stderr of the first command to stdout of the second",
+          "two files on disk"
+        ],
+        "answerIndex": 1,
+        "explanation": "Pipes stream stdout into the next program’s stdin."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "How do you print the exit code of the last command?",
+        "choices": [
+          "echo $!",
+          "echo $?",
+          "echo $$",
+          "echo $0"
+        ],
+        "answerIndex": 1,
+        "explanation": "$? contains the last command’s exit status."
+      }
+    ]
+  },
+  "content": [
+    "<h2>Quiz: Intro</h2><ol><li>What is the difference between a terminal and a shell?</li><li>What does <code>$PATH</code> control?</li><li>What do <code>&gt;</code> and <code>&gt;&gt;</code> do?</li><li>What does the pipe operator <code>|</code> do?</li><li>How do you check the exit code of the last command?</li></ol>"
+  ]
+}

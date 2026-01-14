@@ -1,0 +1,89 @@
+{
+  "id": "advanced-layouts-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about building dashboards that scale is most accurate?",
+        "choices": [
+          "Building Dashboards that Scale always requires external services to work in Streamlit.",
+          "Building Dashboards that Scale is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Building Dashboards that Scale is deprecated and should be avoided in all Streamlit apps.",
+          "Building Dashboards that Scale only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Building Dashboards that Scale is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about container & column mastery is most accurate?",
+        "choices": [
+          "Container & Column Mastery always requires external services to work in Streamlit.",
+          "Container & Column Mastery is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Container & Column Mastery is deprecated and should be avoided in all Streamlit apps.",
+          "Container & Column Mastery only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Container & Column Mastery is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about container & column mastery is most accurate?",
+        "choices": [
+          "Container & Column Mastery always requires external services to work in Streamlit.",
+          "Container & Column Mastery is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Container & Column Mastery is deprecated and should be avoided in all Streamlit apps.",
+          "Container & Column Mastery only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Container & Column Mastery is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about building dashboards that scale is most accurate?",
+        "choices": [
+          "Building Dashboards that Scale always requires external services to work in Streamlit.",
+          "Building Dashboards that Scale is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Building Dashboards that Scale is deprecated and should be avoided in all Streamlit apps.",
+          "Building Dashboards that Scale only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Building Dashboards that Scale is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about theming & design tokens is most accurate?",
+        "choices": [
+          "Theming & Design Tokens always requires external services to work in Streamlit.",
+          "Theming & Design Tokens is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Theming & Design Tokens is deprecated and should be avoided in all Streamlit apps.",
+          "Theming & Design Tokens only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Theming & Design Tokens is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Advanced Layouts', which statement about dynamic layout with tabs & expanders is most accurate?",
+        "choices": [
+          "Dynamic Layout with Tabs & Expanders always requires external services to work in Streamlit.",
+          "Dynamic Layout with Tabs & Expanders is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Dynamic Layout with Tabs & Expanders is deprecated and should be avoided in all Streamlit apps.",
+          "Dynamic Layout with Tabs & Expanders only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Dynamic Layout with Tabs & Expanders is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

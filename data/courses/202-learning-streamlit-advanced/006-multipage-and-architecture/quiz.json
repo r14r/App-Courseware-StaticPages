@@ -1,0 +1,89 @@
+{
+  "id": "multipage-and-architecture-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about configuration management is most accurate?",
+        "choices": [
+          "Configuration Management always requires external services to work in Streamlit.",
+          "Configuration Management is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Configuration Management is deprecated and should be avoided in all Streamlit apps.",
+          "Configuration Management only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Configuration Management is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about inter-page communication is most accurate?",
+        "choices": [
+          "Inter-Page Communication always requires external services to work in Streamlit.",
+          "Inter-Page Communication is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Inter-Page Communication is deprecated and should be avoided in all Streamlit apps.",
+          "Inter-Page Communication only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Inter-Page Communication is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about configuration management is most accurate?",
+        "choices": [
+          "Configuration Management always requires external services to work in Streamlit.",
+          "Configuration Management is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Configuration Management is deprecated and should be avoided in all Streamlit apps.",
+          "Configuration Management only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Configuration Management is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about plugin-like page modules is most accurate?",
+        "choices": [
+          "Plugin-like Page Modules always requires external services to work in Streamlit.",
+          "Plugin-like Page Modules is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Plugin-like Page Modules is deprecated and should be avoided in all Streamlit apps.",
+          "Plugin-like Page Modules only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Plugin-like Page Modules is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about dependency injection in streamlit is most accurate?",
+        "choices": [
+          "Dependency Injection in Streamlit always requires external services to work in Streamlit.",
+          "Dependency Injection in Streamlit is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Dependency Injection in Streamlit is deprecated and should be avoided in all Streamlit apps.",
+          "Dependency Injection in Streamlit only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Dependency Injection in Streamlit is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Multipage and Architecture', which statement about app structure & navigation is most accurate?",
+        "choices": [
+          "App Structure & Navigation always requires external services to work in Streamlit.",
+          "App Structure & Navigation is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "App Structure & Navigation is deprecated and should be avoided in all Streamlit apps.",
+          "App Structure & Navigation only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "App Structure & Navigation is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

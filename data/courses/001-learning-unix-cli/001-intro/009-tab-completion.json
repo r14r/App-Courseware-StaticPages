@@ -1,0 +1,10 @@
+{
+  "id": "c1t009",
+  "title": "Tab Completion",
+  "content": [
+    "<h2>Why it matters</h2><p>Tab completion reduces typing and prevents mistakes by completing commands, paths, and options.</p>",
+    "<h2>How to use</h2><ul><li>Type part of a command or path, press <code>Tab</code></li><li>If ambiguous, press <code>Tab</code> twice to list possibilities (shell-dependent)</li></ul>",
+    "<h2>Examples</h2><pre><code class=\"language-bash\">cd ~/uni&lt;Tab&gt;\nls /et&lt;Tab&gt;\n</code></pre>",
+    "<h2>Practice</h2><pre><code class=\"language-bash\">mkdir -p ~/unix-cli-practice/completion-demo\ncd ~/unix-cli-practice/completion-demo\ntouch alpha.txt alps.txt beta.txt\nls a&lt;Tab&gt;\n</code></pre>"
+  ]
+}

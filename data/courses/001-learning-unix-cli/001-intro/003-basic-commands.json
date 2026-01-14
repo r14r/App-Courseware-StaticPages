@@ -1,0 +1,9 @@
+{
+  "id": "c1t003",
+  "title": "Basic Commands",
+  "content": [
+    "<h2>Essential commands</h2><ul><li><code>pwd</code>: print working directory</li><li><code>ls</code>: list directory contents</li><li><code>cd</code>: change directory</li><li><code>mkdir</code>: create directories</li><li><code>touch</code>: create empty files / update timestamps</li><li><code>cp</code>, <code>mv</code>, <code>rm</code>: copy, move/rename, remove</li></ul>",
+    "<h2>Examples</h2><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p demo\ncd demo\npwd\n\ntouch hello.txt\nprintf \"Hello\\n\" &gt; hello.txt\nls -la\n\ncp hello.txt hello-copy.txt\nmv hello-copy.txt hello-renamed.txt\nrm hello-renamed.txt\n</code></pre>",
+    "<h2>Getting help</h2><pre><code class=\"language-bash\">man ls\nls --help 2&gt;/dev/null || true\n</code></pre><p><em>Note:</em> On macOS, some tools differ slightly and <code>--help</code> may behave differently. Prefer <code>man</code> when in doubt.</p>"
+  ]
+}

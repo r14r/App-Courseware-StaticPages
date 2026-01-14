@@ -1,5 +1,0 @@
-{
-  "id": "t5",
-  "title": "Multiple assignment",
-  "contentHtml": "<p>Tuple unpacking: a, b = 1, 2.</p>"
-}

@@ -1,0 +1,9 @@
+{
+  "id": "c2t001",
+  "title": "Using cd",
+  "content": [
+    "<h2>Change directory</h2><p><code>cd</code> changes the current working directory.</p><pre><code class=\"language-bash\">cd ~\ncd /tmp\ncd ~/unix-cli-practice\n</code></pre>",
+    "<h2>Useful patterns</h2><ul><li><code>cd</code> (with no args): go to home</li><li><code>cd -</code>: go to the previous directory</li><li><code>cd ..</code>: go to parent</li></ul><pre><code class=\"language-bash\">pwd\ncd ..\npwd\ncd -\n</code></pre>",
+    "<h2>Practice</h2><pre><code class=\"language-bash\">mkdir -p ~/unix-cli-practice/nav/a/b\ncd ~/unix-cli-practice/nav/a/b\ncd ..\ncd -\n</code></pre>"
+  ]
+}

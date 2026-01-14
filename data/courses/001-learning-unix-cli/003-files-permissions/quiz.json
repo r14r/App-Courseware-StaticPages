@@ -1,0 +1,76 @@
+{
+  "id": "c3quiz",
+  "title": "Quiz",
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In `-rw-r--r--`, which part refers to group permissions?",
+        "choices": [
+          "rw-",
+          "r-- (middle)",
+          "r-- (last)",
+          "the leading -"
+        ],
+        "answerIndex": 1,
+        "explanation": "Permissions are user/group/other in that order."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "On directories, execute (x) primarily allows...",
+        "choices": [
+          "renaming the directory",
+          "traversing/entering the directory",
+          "reading file contents",
+          "changing ownership"
+        ],
+        "answerIndex": 1,
+        "explanation": "Directory execute means you can access entries inside (traverse)."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "What does `chmod 600 file` set?",
+        "choices": [
+          "rw-------",
+          "rwxr-xr-x",
+          "rw-r--r--",
+          "r--r--r--"
+        ],
+        "answerIndex": 0,
+        "explanation": "600 grants read/write to owner only."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "A symbolic link is best described as...",
+        "choices": [
+          "a copy of the file",
+          "a pointer to another path",
+          "an encrypted file",
+          "a file permission"
+        ],
+        "answerIndex": 1,
+        "explanation": "Symlinks reference a target path."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "The sticky bit on a shared directory typically means...",
+        "choices": [
+          "anyone can delete any file",
+          "only root can enter",
+          "users can delete only their own files",
+          "files become executable"
+        ],
+        "answerIndex": 2,
+        "explanation": "Sticky bit prevents users from deleting others' files in shared writable dirs."
+      }
+    ]
+  },
+  "content": [
+    "<h2>Quiz: Files & Permissions</h2><ol><li>What do the three permission classes (u/g/o) represent?</li><li>What does execute mean on a directory?</li><li>What is the difference between symbolic and numeric chmod?</li><li>What is a symbolic link?</li><li>What does the sticky bit do on a shared directory?</li></ol>"
+  ]
+}

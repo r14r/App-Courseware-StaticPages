@@ -1,0 +1,8 @@
+{
+  "id": "c3t004",
+  "title": "Changing Ownership",
+  "content": [
+    "<h2>chown and chgrp</h2><p>Ownership changes often require elevated privileges (e.g., <code>sudo</code>).</p><pre><code class=\"language-bash\"># Examples (may require sudo)\n# sudo chown alice file.txt\n# sudo chown alice:staff file.txt\n# sudo chgrp staff file.txt\n</code></pre>",
+    "<h2>When to use</h2><ul><li>Fix ownership after copying files as root</li><li>Prepare directories for services/users</li><li>Manage shared folders via groups</li></ul>"
+  ]
+}

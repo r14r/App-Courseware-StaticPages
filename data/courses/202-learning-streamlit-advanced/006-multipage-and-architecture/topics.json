@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-app-structure-navigation.json",
+    "title": "App Structure & Navigation"
+  },
+  {
+    "file": "002-inter-page-communication.json",
+    "title": "Inter-Page Communication"
+  },
+  {
+    "file": "003-dependency-injection-in-streamlit.json",
+    "title": "Dependency Injection in Streamlit"
+  },
+  {
+    "file": "004-configuration-management.json",
+    "title": "Configuration Management"
+  },
+  {
+    "file": "005-plugin-like-page-modules.json",
+    "title": "Plugin-like Page Modules"
+  },
+  {
+    "file": "006-refactoring-to-packages.json",
+    "title": "Refactoring to Packages"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

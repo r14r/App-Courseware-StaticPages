@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-component-architecture.json",
+    "title": "Component Architecture"
+  },
+  {
+    "file": "002-react-component-basics.json",
+    "title": "React Component Basics"
+  },
+  {
+    "file": "003-bidirectional-data-exchange.json",
+    "title": "Bidirectional Data Exchange"
+  },
+  {
+    "file": "004-packaging-versioning-components.json",
+    "title": "Packaging & Versioning Components"
+  },
+  {
+    "file": "005-testing-components.json",
+    "title": "Testing Components"
+  },
+  {
+    "file": "006-advanced-ui-widgets.json",
+    "title": "Advanced UI Widgets"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

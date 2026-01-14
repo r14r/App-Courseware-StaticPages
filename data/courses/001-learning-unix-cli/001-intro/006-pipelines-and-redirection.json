@@ -1,0 +1,10 @@
+{
+  "id": "c1t006",
+  "title": "Pipelines and Redirection",
+  "content": [
+    "<h2>Standard streams</h2><ul><li>stdin (0): input</li><li>stdout (1): normal output</li><li>stderr (2): errors</li></ul>",
+    "<h2>Redirection</h2><pre><code class=\"language-bash\">echo \"hello\" &gt; out.txt\necho \"more\" &gt;&gt; out.txt\nls /nope 2&gt; err.txt\n</code></pre>",
+    "<h2>Pipes</h2><p>The pipe operator <code>|</code> connects stdout of one command to stdin of the next.</p><pre><code class=\"language-bash\">ls -la | less\nprintf \"a\\nb\\nc\\n\" | wc -l\ncat app.log | grep \"ERROR\"\n</code></pre>",
+    "<h2>tee</h2><pre><code class=\"language-bash\">uname -a | tee system.txt\n</code></pre><p><code>tee</code> is useful when you want to both see output and save it for later steps.</p>"
+  ]
+}

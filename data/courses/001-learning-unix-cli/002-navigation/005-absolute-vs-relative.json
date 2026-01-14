@@ -1,0 +1,9 @@
+{
+  "id": "c2t005",
+  "title": "Absolute vs Relative",
+  "content": [
+    "<h2>Absolute</h2><p>Starts with <code>/</code> and is independent of where you currently are.</p><pre><code class=\"language-bash\">ls /etc\n</code></pre>",
+    "<h2>Relative</h2><p>Resolved from your current directory.</p><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p rel-demo/sub\nls rel-demo\nls rel-demo/sub\n</code></pre>",
+    "<h2>Rule of thumb</h2><p>Use absolute paths in scripts for robustness; use relative paths for interactive work when context is clear.</p>"
+  ]
+}

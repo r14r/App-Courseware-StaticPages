@@ -1,0 +1,8 @@
+{
+  "id": "c2t007",
+  "title": "File Previews",
+  "content": [
+    "<h2>Quick viewing tools</h2><ul><li><code>cat</code>: print entire file</li><li><code>less</code>: scroll/search large files</li><li><code>head</code>/<code>tail</code>: first/last lines</li></ul><pre><code class=\"language-bash\">printf \"one\\ntwo\\nthree\\n\" &gt; sample.txt\ncat sample.txt\nhead -n 2 sample.txt\ntail -n 1 sample.txt\nless sample.txt\n</code></pre>",
+    "<h2>Search inside less</h2><p>Press <code>/</code>, type a word, Enter; use <code>n</code>/<code>N</code> to navigate matches; press <code>q</code> to quit.</p>"
+  ]
+}

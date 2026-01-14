@@ -1,0 +1,8 @@
+{
+  "id": "c2t009",
+  "title": "Globbing",
+  "content": [
+    "<h2>What is globbing?</h2><p>Globs are wildcard patterns expanded by the shell before the command runs.</p><ul><li><code>*</code>: any characters</li><li><code>?</code>: exactly one character</li><li><code>[abc]</code>: one of a/b/c</li></ul><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p glob-demo\ncd glob-demo\ntouch a1.txt a2.txt b1.txt notes.md\nls *.txt\nls ?.txt 2&gt;/dev/null || true\nls [ab]*.txt\n</code></pre>",
+    "<h2>Important</h2><p>Globs are expanded by the shell, not by the program. If you need a literal <code>*</code>, quote it.</p><pre><code class=\"language-bash\">echo \"*\"   # prints literal *\n</code></pre>"
+  ]
+}

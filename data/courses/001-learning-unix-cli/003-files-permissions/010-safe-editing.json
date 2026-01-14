@@ -1,0 +1,10 @@
+{
+  "id": "c3t010",
+  "title": "Safe Editing",
+  "content": [
+    "<h2>Principles</h2><ul><li>Inspect before changing: <code>ls</code>, <code>cat</code>, <code>stat</code></li><li>Prefer backups before bulk edits</li><li>Avoid destructive one-liners until you understand expansions</li><li>Use <code>rm -i</code> if you are unsure</li></ul>",
+    "<h2>Safe patterns</h2><pre><code class=\"language-bash\"># 1) Preview what will match\nls *.log\n\n# 2) If correct, then remove\nrm -i *.log\n</code></pre>",
+    "<h2>Bulk replace without losing the original</h2><pre><code class=\"language-bash\">cp config.conf config.conf.bak\n# then edit config.conf\n</code></pre>",
+    "<h2>Use -- to end options</h2><pre><code class=\"language-bash\">touch -- -weird\nls -- -weird\nrm -- -weird\n</code></pre>"
+  ]
+}

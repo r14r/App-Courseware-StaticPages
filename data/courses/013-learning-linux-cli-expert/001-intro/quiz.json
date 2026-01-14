@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "intro-q1",
+      "type": "single",
+      "question": "What is the Linux shell?",
+      "options": [
+        "A graphical file manager",
+        "A text-based interface",
+        "A video player"
+      ],
+      "correctIndex": 1,
+      "explanation": "The shell is text-based."
+    },
+    {
+      "id": "intro-q2",
+      "type": "single",
+      "question": "Which command shows current directory?",
+      "options": [
+        "ls",
+        "pwd",
+        "cd"
+      ],
+      "correctIndex": 1,
+      "explanation": "`pwd` prints working directory."
+    },
+    {
+      "id": "intro-q3",
+      "type": "single",
+      "question": "Which symbol pipes output to another command?",
+      "options": [
+        "|",
+        "&",
+        ">"
+      ],
+      "correctIndex": 0,
+      "explanation": "`|` is a pipeline."
+    },
+    {
+      "id": "intro-q4",
+      "type": "single",
+      "question": "Which file is typically root of the filesystem?",
+      "options": [
+        "/home",
+        "/etc",
+        "/"
+      ],
+      "correctIndex": 2,
+      "explanation": "`/` is the root directory."
+    },
+    {
+      "id": "intro-q5",
+      "type": "single",
+      "question": "Which command lists directory contents?",
+      "options": [
+        "ls",
+        "touch",
+        "mkdir"
+      ],
+      "correctIndex": 0,
+      "explanation": "`ls` lists files and directories."
+    },
+    {
+      "id": "intro-q6",
+      "type": "single",
+      "question": "How to append output to a file?",
+      "options": [
+        ">",
+        ">>",
+        "<"
+      ],
+      "correctIndex": 1,
+      "explanation": "`>>` appends to a file."
+    },
+    {
+      "id": "intro-q7",
+      "type": "single",
+      "question": "Which key often completes filenames?",
+      "options": [
+        "Enter",
+        "Tab",
+        "Esc"
+      ],
+      "correctIndex": 1,
+      "explanation": "Tab triggers completion."
+    },
+    {
+      "id": "intro-q8",
+      "type": "single",
+      "question": "How to view environment variables?",
+      "options": [
+        "env",
+        "lsenv",
+        "showenv"
+      ],
+      "correctIndex": 0,
+      "explanation": "`env` lists environment variables."
+    },
+    {
+      "id": "intro-q9",
+      "type": "single",
+      "question": "Which command shows previous commands?",
+      "options": [
+        "history",
+        "prev",
+        "log"
+      ],
+      "correctIndex": 0,
+      "explanation": "`history` shows the command history."
+    },
+    {
+      "id": "intro-q10",
+      "type": "single",
+      "question": "Which character denotes a hidden file?",
+      "options": [
+        ".",
+        "#",
+        "~"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hidden files begin with a dot (`.`)."
+    }
+  ]
+}

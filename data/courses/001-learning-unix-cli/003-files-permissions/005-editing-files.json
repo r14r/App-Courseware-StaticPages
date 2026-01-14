@@ -1,0 +1,9 @@
+{
+  "id": "c3t005",
+  "title": "Editing Files",
+  "content": [
+    "<h2>Common CLI editors</h2><ul><li><code>nano</code>: simple and beginner-friendly</li><li><code>vi</code>/<code>vim</code>: always available on servers</li></ul><pre><code class=\"language-bash\">nano notes.txt\n# or\nvi notes.txt\n</code></pre>",
+    "<h2>Minimal vi survival</h2><ul><li><code>i</code>: insert</li><li><code>Esc</code>: normal mode</li><li><code>:wq</code>: save and quit</li><li><code>:q!</code>: quit without saving</li></ul>",
+    "<h2>Editing without an editor</h2><pre><code class=\"language-bash\">printf \"line1\\nline2\\n\" &gt; file.txt\necho \"line3\" &gt;&gt; file.txt\n</code></pre>"
+  ]
+}

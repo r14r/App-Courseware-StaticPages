@@ -1,5 +1,0 @@
-{
-  "id": "t2",
-  "title": "Sliders",
-  "contentHtml": "<p>Use st.slider() for numeric input.</p>"
-}

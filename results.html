@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz Results</title>
+  </head>
+  <body class="bg-light" x-data="demoQuizResults" x-init="init()">
+    <header class="bg-white border-bottom">
+      <div class="container py-3 d-flex align-items-center justify-content-between">
+        <h1 class="h5 mb-0" x-text="title"></h1>
+        <div class="d-flex gap-2">
+          <a class="btn btn-outline-secondary btn-sm" :href="courseLink">Back to course</a>
+          <a class="btn btn-primary btn-sm" :href="quizLink">Back to quiz</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container py-4">
+      <template x-if="!payload">
+        <div class="card">
+          <div class="card-body">
+            <p class="mb-2">No quiz results found.</p>
+            <a class="btn btn-primary btn-sm" :href="quizLink">Go to quiz</a>
+          </div>
+        </div>
+      </template>
+
+      <template x-if="payload">
+        <div class="card position-relative overflow-hidden">
+          <template x-if="isPerfect()">
+            <div class="balloon-burst" aria-hidden="true">
+              <span class="balloon balloon--one"></span>
+              <span class="balloon balloon--two"></span>
+              <span class="balloon balloon--three"></span>
+              <span class="balloon balloon--four"></span>
+              <span class="balloon balloon--five"></span>
+            </div>
+          </template>
+          <div class="card-body">
+            <div class="mb-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <div class="fw-semibold">Score</div>
+                <div><strong x-text="payload.score"></strong> / <span x-text="payload.total"></span></div>
+              </div>
+              <div class="progress" role="progressbar" :aria-valuenow="payload.score" :aria-valuemax="payload.total">
+                <div class="progress-bar" :style="progressStyle()" x-text="progressPercent() + '%'"></div>
+              </div>
+            </div>
+
+            <template x-for="(result, rIdx) in payload.results" :key="result.id">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="d-flex align-items-center gap-2">
+                    <template x-if="isCorrect(result)">
+                      <svg class="text-success" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                        <path d="M13.485 1.929a1 1 0 0 1 .086 1.414l-7 8a1 1 0 0 1-1.497.036L2.43 8.733a1 1 0 1 1 1.414-1.414l1.77 1.77 6.293-7.19a1 1 0 0 1 1.414-.086z"/>
+                      </svg>
+                    </template>
+                    <template x-if="!isCorrect(result)">
+                      <svg class="text-danger" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </template>
+                    <div class="fw-medium" x-text="(rIdx + 1) + '. ' + result.question"></div>
+                  </div>
+                  <div class="mt-2">
+                    <div>Selected: <span class="fw-semibold" x-text="selectedLabel(result)"></span></div>
+                    <div>Correct: <span class="fw-semibold text-success" x-text="correctLabel(result)"></span></div>
+                    <template x-if="result.explanation">
+                      <div class="mt-2 text-muted" x-text="result.explanation"></div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </template>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

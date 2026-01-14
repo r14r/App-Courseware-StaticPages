@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-container-column-mastery.json",
+    "title": "Container & Column Mastery"
+  },
+  {
+    "file": "002-dynamic-layout-with-tabs-expanders.json",
+    "title": "Dynamic Layout with Tabs & Expanders"
+  },
+  {
+    "file": "003-theming-design-tokens.json",
+    "title": "Theming & Design Tokens"
+  },
+  {
+    "file": "004-responsive-design-strategies.json",
+    "title": "Responsive Design Strategies"
+  },
+  {
+    "file": "005-session-aware-layout-changes.json",
+    "title": "Session-Aware Layout Changes"
+  },
+  {
+    "file": "006-building-dashboards-that-scale.json",
+    "title": "Building Dashboards that Scale"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

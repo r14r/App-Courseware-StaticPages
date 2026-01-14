@@ -1,0 +1,13 @@
+{
+  "id": "t002",
+  "title": "Dynamic Layout with Tabs & Expanders",
+  "content": [
+    "<h2>Concept</h2><p>This topic explores dynamic layout with tabs & expanders within the context of Streamlit. You will learn how to apply the concept to build robust, maintainable, and user-friendly apps.</p>",
+    "<h2>Why it matters</h2><p>Advanced Streamlit patterns let you ship production-ready apps with fewer surprises. Mastery here improves user experience, performance, and long-term maintainability.</p>",
+    "<h2>Core APIs / Syntax</h2><p>Below are minimal examples that illustrate the essential APIs and patterns.</p>",
+    "<pre><code class=\"hljs language-python\">import streamlit as st\n\nst.title(\"Advanced Layouts — Dynamic Layout with Tabs & Expanders\")\nst.write(\"Hello from an advanced example.\")</code></pre>",
+    "<pre><code class=\"hljs language-python\">import streamlit as st\n\nwith st.container():\n    col1, col2, col3 = st.columns([2,1,1])\n    with col1:\n        st.subheader(\"Main Panel\")\n        st.line_chart([1, 5, 3, 6])\n    with col2:\n        st.subheader(\"Filters\")\n        st.slider(\"Window\", 1, 30, 7)\n    with col3:\n        with st.expander(\"Details\"):\n            st.write(\"Context and metadata\")\nst.tabs([\"Overview\", \"Insights\", \"Raw Data\"])</code></pre>",
+    "<h2>Common pitfalls</h2><p>• Overusing reruns without caching can cause sluggish UIs.\n• Global mutable state can create race conditions with callbacks.\n• Disconnected page-level state harms UX.\n• Not profiling heavy code paths leads to timeouts.</p>",
+    "<h2>Practice</h2><p>1) Extend the example to a realistic scenario.\n2) Add validation and error handling.\n3) Measure the impact (latency, memory) and document your findings.</p>"
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-st-cache-data-deep-dive.json",
+    "title": "st.cache_data Deep Dive"
+  },
+  {
+    "file": "002-st-cache-resource-patterns.json",
+    "title": "st.cache_resource Patterns"
+  },
+  {
+    "file": "003-memoization-and-idempotence.json",
+    "title": "Memoization and Idempotence"
+  },
+  {
+    "file": "004-profiling-streamlit-apps.json",
+    "title": "Profiling Streamlit Apps"
+  },
+  {
+    "file": "005-batching-debouncing-inputs.json",
+    "title": "Batching & Debouncing Inputs"
+  },
+  {
+    "file": "006-large-data-handling.json",
+    "title": "Large Data Handling"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

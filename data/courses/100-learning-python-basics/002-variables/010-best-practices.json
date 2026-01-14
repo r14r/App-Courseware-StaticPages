@@ -1,0 +1,7 @@
+{
+  "id": "t10",
+  "title": "Best practices",
+  "content": [
+    "<p>Name variables clearly and avoid single-letter names except in loops.</p>"
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "file": "001-using-cd.json",
+    "title": "Using Cd"
+  },
+  {
+    "file": "002-listing-files.json",
+    "title": "Listing Files"
+  },
+  {
+    "file": "003-path-basics.json",
+    "title": "Path Basics"
+  },
+  {
+    "file": "004-home-and-tilde.json",
+    "title": "Home And Tilde"
+  },
+  {
+    "file": "005-absolute-vs-relative.json",
+    "title": "Absolute Vs Relative"
+  },
+  {
+    "file": "006-finding-files.json",
+    "title": "Finding Files"
+  },
+  {
+    "file": "007-file-previews.json",
+    "title": "File Previews"
+  },
+  {
+    "file": "008-tab-completion.json",
+    "title": "Tab Completion"
+  },
+  {
+    "file": "009-globbing.json",
+    "title": "Globbing"
+  },
+  {
+    "file": "010-shortcuts.json",
+    "title": "Shortcuts"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

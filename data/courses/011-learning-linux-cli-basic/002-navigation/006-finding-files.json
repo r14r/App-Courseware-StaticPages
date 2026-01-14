@@ -1,0 +1,17 @@
+{
+  "id": "t6",
+  "title": "Finding files",
+  "content": [
+    "<h2>Overview</h2><p>Finding files focuses on searching for files with find, locate, and command lookup. This section keeps examples short and safe so you can build confidence.</p>",
+    "<h2>Key ideas</h2><p>Keep these ideas in mind as you work with Finding files:</p><ul><li>Know where you are and how to move safely.</li><li>Use listing and search tools to avoid guessing.</li><li>Use patterns to work faster with many files.</li></ul>",
+    "<h2>Quick start</h2><p>Start with a minimal command and read the output carefully.</p><pre><code class=\"language-bash\">find . -name \"*.txt\"\n</code></pre><p>Run it twice so you can see the output change when the environment changes.</p>",
+    "<h2>Example: everyday usage</h2><p>This example mirrors how you will use Finding files in daily work.</p><pre><code class=\"language-bash\">find . -type f -size +1M\n</code></pre><p>Notice the order of flags and arguments.</p>",
+    "<h2>Example: common flags</h2><p>Use flags to refine output and reduce noise.</p><pre><code class=\"language-bash\">locate passwd\n</code></pre><p>Always check <code>--help</code> if a flag is unclear.</p>",
+    "<h2>Example: working with paths</h2><p>Paths and filenames are the most common sources of mistakes.</p><pre><code class=\"language-bash\">which ls\n</code></pre><p>Quote paths with spaces to avoid unexpected splits.</p>",
+    "<h2>Example: verification</h2><p>Verify your work after each change to stay safe.</p><pre><code class=\"language-bash\">type -a python\n</code></pre><p>Get comfortable confirming state before moving on.</p>",
+    "<h2>Pitfalls to avoid</h2><p>Go slowly and re-check the target when a command can change files or permissions. If you are unsure, run a read-only command first.</p>",
+    "<h2>Practice checklist</h2><p>Try the following steps in a practice folder.</p><ol><li>Create a small practice folder tree.</li><li>Move around using relative and absolute paths.</li><li>List and search for files using patterns.</li></ol>",
+    "<h2>Real-world workflow</h2><p>Combine a short command, a verification step, and a quick note about the result. This habit keeps your work reproducible.</p>",
+    "<h2>Recap</h2><p>You now have a reliable starting point for Finding files. Repeat the examples until the command patterns feel natural.</p>"
+  ]
+}

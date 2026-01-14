@@ -1,0 +1,9 @@
+{
+  "id": "c3t003",
+  "title": "Changing Permissions",
+  "content": [
+    "<h2>chmod (symbolic)</h2><pre><code class=\"language-bash\">chmod u+x script.sh\nchmod go-rw secret.txt\nchmod a+r readme.txt\n</code></pre>",
+    "<h2>Make a script executable</h2><pre><code class=\"language-bash\">cat &gt; hello.sh &lt;&lt;'EOF'\n#!/usr/bin/env sh\necho \"Hello\"\nEOF\nchmod +x hello.sh\n./hello.sh\n</code></pre>",
+    "<h2>Practice</h2><pre><code class=\"language-bash\">touch secret.txt\nchmod 600 secret.txt\nls -l secret.txt\n</code></pre>"
+  ]
+}

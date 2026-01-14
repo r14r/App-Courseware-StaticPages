@@ -1,0 +1,9 @@
+{
+  "id": "c2t010",
+  "title": "Shortcuts",
+  "content": [
+    "<h2>Navigation shortcuts</h2><ul><li><code>cd -</code>: previous directory</li><li><code>pushd</code>/<code>popd</code>: directory stack (shell-dependent)</li></ul><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p stack/a stack/b\npushd stack/a\npushd ../b\ndirs\npopd\npopd\n</code></pre>",
+    "<h2>Line editing shortcuts</h2><ul><li><code>Ctrl+A</code>: start of line</li><li><code>Ctrl+E</code>: end of line</li><li><code>Alt+B</code>/<code>Alt+F</code>: move by word (terminal-dependent)</li></ul>",
+    "<h2>Practice</h2><p>Use <code>Ctrl+A</code>/<code>Ctrl+E</code> while editing a long command. Use <code>cd -</code> repeatedly when switching between two folders.</p>"
+  ]
+}

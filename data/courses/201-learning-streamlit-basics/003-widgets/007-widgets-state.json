@@ -1,0 +1,7 @@
+{
+  "id": "t7",
+  "title": "Widgets state",
+  "content": [
+    "<p>Use session state to persist widget values.</p>"
+  ]
+}

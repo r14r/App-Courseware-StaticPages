@@ -1,0 +1,9 @@
+{
+  "id": "c3t009",
+  "title": "Sticky / setuid / setgid",
+  "content": [
+    "<h2>Special permission bits</h2><ul><li><strong>sticky bit</strong> (on directories): users can delete only their own files</li><li><strong>setuid</strong>: program runs with file owner privileges</li><li><strong>setgid</strong>: program runs with group privileges (or directories inherit group)</li></ul>",
+    "<h2>Typical example: /tmp</h2><p><code>/tmp</code> often has the sticky bit set.</p><pre><code class=\"language-bash\">ls -ld /tmp\n# Look for a 't' in the permissions (e.g., drwxrwxrwt)\n</code></pre>",
+    "<h2>Setting sticky bit (example)</h2><pre><code class=\"language-bash\">mkdir -p ~/unix-cli-practice/sticky-demo\nchmod 1777 ~/unix-cli-practice/sticky-demo\nls -ld ~/unix-cli-practice/sticky-demo\n</code></pre><p>Use special bits carefully; <code>setuid</code>/<code>setgid</code> are security-sensitive and typically managed by package/system admins.</p>"
+  ]
+}

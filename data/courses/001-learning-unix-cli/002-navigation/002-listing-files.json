@@ -1,0 +1,9 @@
+{
+  "id": "c2t002",
+  "title": "Listing Files",
+  "content": [
+    "<h2>ls options that matter</h2><ul><li><code>ls</code>: simple list</li><li><code>ls -l</code>: long list</li><li><code>ls -a</code>: include hidden files</li><li><code>ls -h</code>: human sizes (commonly with <code>-l</code>)</li></ul><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nls\nls -la\nls -lah\n</code></pre>",
+    "<h2>Sorting</h2><pre><code class=\"language-bash\">ls -lt    # sort by time\nls -lS    # sort by size\n</code></pre>",
+    "<h2>Inspect a file</h2><pre><code class=\"language-bash\">file /bin/ls\n</code></pre>"
+  ]
+}

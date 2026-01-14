@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-streamlit-community-cloud.json",
+    "title": "Streamlit Community Cloud"
+  },
+  {
+    "file": "002-dockerizing-streamlit.json",
+    "title": "Dockerizing Streamlit"
+  },
+  {
+    "file": "003-kubernetes-autoscaling.json",
+    "title": "Kubernetes & Autoscaling"
+  },
+  {
+    "file": "004-ci-cd-pipelines.json",
+    "title": "CI/CD Pipelines"
+  },
+  {
+    "file": "005-environment-secrets.json",
+    "title": "Environment & Secrets"
+  },
+  {
+    "file": "006-cold-starts-health-checks.json",
+    "title": "Cold Starts & Health Checks"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

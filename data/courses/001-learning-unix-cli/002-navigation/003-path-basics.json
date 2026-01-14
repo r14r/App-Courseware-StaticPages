@@ -1,0 +1,9 @@
+{
+  "id": "c2t003",
+  "title": "Path Basics",
+  "content": [
+    "<h2>What is a path?</h2><p>A path describes a location in the filesystem tree.</p>",
+    "<h2>Special segments</h2><ul><li><code>.</code> current directory</li><li><code>..</code> parent directory</li></ul><pre><code class=\"language-bash\">pwd\nls .\nls ..\n</code></pre>",
+    "<h2>Separators and spaces</h2><p>Paths use <code>/</code> as separator. If a filename has spaces, quote it.</p><pre><code class=\"language-bash\">mkdir -p \"My Folder\"\ntouch \"My Folder/file.txt\"\nls \"My Folder\"\n</code></pre>"
+  ]
+}

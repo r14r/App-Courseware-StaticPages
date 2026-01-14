@@ -1,0 +1,9 @@
+{
+  "id": "c1t008",
+  "title": "Shell History",
+  "content": [
+    "<h2>What history is</h2><p>Your shell records previously executed commands. This improves speed and repeatability.</p>",
+    "<h2>Basic usage</h2><ul><li>Up/Down arrows: browse history</li><li><code>history</code>: list recent commands</li><li><code>Ctrl+R</code>: reverse search (type part of a command)</li></ul><pre><code class=\"language-bash\">history | tail\n</code></pre>",
+    "<h2>Re-running commands</h2><pre><code class=\"language-bash\">!!        # repeat last command\n!42       # repeat command number 42 (if supported)\n</code></pre><p>Be careful with history expansion. Prefer copying and editing commands before re-running, especially destructive ones like <code>rm</code>.</p>"
+  ]
+}

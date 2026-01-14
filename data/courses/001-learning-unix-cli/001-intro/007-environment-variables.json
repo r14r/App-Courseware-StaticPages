@@ -1,0 +1,11 @@
+{
+  "id": "c1t007",
+  "title": "Environment Variables",
+  "content": [
+    "<h2>What they are</h2><p>Environment variables are key/value pairs available to processes. They configure program behavior and are inherited by child processes.</p>",
+    "<h2>Common variables</h2><ul><li><code>HOME</code>: your home directory</li><li><code>PATH</code>: where the shell searches for executables</li><li><code>SHELL</code>: your current shell</li></ul><pre><code class=\"language-bash\">echo \"$HOME\"\necho \"$PATH\" | tr ':' '\\n' | head\nprintenv | head\n</code></pre>",
+    "<h2>Setting and exporting</h2><pre><code class=\"language-bash\">MYVAR=\"hello\"\necho \"$MYVAR\"\nexport MYVAR\n</code></pre>",
+    "<h2>One-command environment</h2><pre><code class=\"language-bash\">DEBUG=1 my_program --verbose\n</code></pre>",
+    "<h2>Profiles</h2><p>Shell startup files load variables and aliases (e.g., <code>~/.zshrc</code>, <code>~/.bashrc</code>, <code>~/.profile</code>).</p>"
+  ]
+}

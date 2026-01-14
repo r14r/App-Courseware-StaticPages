@@ -1,0 +1,11 @@
+{
+  "id": "c1t005",
+  "title": "Command Syntax",
+  "content": [
+    "<h2>General form</h2><pre><code class=\"language-bash\">command [options] [arguments]\n</code></pre>",
+    "<h2>Options</h2><ul><li>Short options: <code>-l</code>, combined: <code>-lah</code></li><li>Long options: <code>--recursive</code>, <code>--help</code></li></ul>",
+    "<h2>Quoting</h2><pre><code class=\"language-bash\">echo Hello World\necho \"Hello World\"\necho 'No $expansion here'\necho \"But $HOME expands\"\n</code></pre>",
+    "<h2>Exit codes</h2><p>Commands return an exit status: <code>0</code> = success, non-zero = error/special condition. The last status is in <code>$?</code>.</p><pre><code class=\"language-bash\">ls /nope\necho $?\nls /\necho $?\n</code></pre>",
+    "<h2>Chaining</h2><pre><code class=\"language-bash\">mkdir -p sandbox &amp;&amp; cd sandbox\ncd /nope || echo \"cd failed\"\n</code></pre>"
+  ]
+}

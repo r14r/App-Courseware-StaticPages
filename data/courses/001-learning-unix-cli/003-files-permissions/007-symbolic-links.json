@@ -1,0 +1,9 @@
+{
+  "id": "c3t007",
+  "title": "Symbolic Links",
+  "content": [
+    "<h2>What is a symlink?</h2><p>A <strong>symbolic link</strong> is a special file that points to another path.</p>",
+    "<h2>Create and inspect</h2><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nmkdir -p links-demo\ncd links-demo\necho \"data\" &gt; target.txt\nln -s target.txt link.txt\nls -la\ncat link.txt\n</code></pre>",
+    "<h2>Why symlinks are useful</h2><ul><li>Create convenient shortcuts</li><li>Switch versions by changing the link target</li><li>Avoid duplication of large files</li></ul>"
+  ]
+}

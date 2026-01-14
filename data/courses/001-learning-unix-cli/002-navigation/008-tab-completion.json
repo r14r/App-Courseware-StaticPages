@@ -1,0 +1,8 @@
+{
+  "id": "c2t008",
+  "title": "Tab Completion",
+  "content": [
+    "<h2>Path completion</h2><p>Use <code>Tab</code> to complete paths and reduce errors.</p><pre><code class=\"language-bash\">cd ~/unix-cli-practice\nls 00&lt;Tab&gt;\n</code></pre>",
+    "<h2>Command completion</h2><p>Many shells can complete commands and options (especially with completion frameworks enabled).</p><pre><code class=\"language-bash\">gr&lt;Tab&gt;    # might complete to grep\n</code></pre>"
+  ]
+}

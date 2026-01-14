@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-unit-integration-testing.json",
+    "title": "Unit & Integration Testing"
+  },
+  {
+    "file": "002-playwright-e2e-for-streamlit.json",
+    "title": "Playwright/E2E for Streamlit"
+  },
+  {
+    "file": "003-logging-observability.json",
+    "title": "Logging & Observability"
+  },
+  {
+    "file": "004-metrics-tracing.json",
+    "title": "Metrics & Tracing"
+  },
+  {
+    "file": "005-synthetic-monitoring.json",
+    "title": "Synthetic Monitoring"
+  },
+  {
+    "file": "006-error-handling-patterns.json",
+    "title": "Error Handling Patterns"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

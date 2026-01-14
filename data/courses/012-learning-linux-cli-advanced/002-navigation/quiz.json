@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "nav-q1",
+      "type": "single",
+      "question": "Which command changes directory?",
+      "options": [
+        "ls",
+        "cd",
+        "pwd"
+      ],
+      "correctIndex": 1,
+      "explanation": "`cd` changes directory."
+    },
+    {
+      "id": "nav-q2",
+      "type": "single",
+      "question": "How to list all files including hidden ones?",
+      "options": [
+        "ls -a",
+        "ls -l",
+        "ls -h"
+      ],
+      "correctIndex": 0,
+      "explanation": "`ls -a` shows hidden files."
+    },
+    {
+      "id": "nav-q3",
+      "type": "single",
+      "question": "What does `..` mean in paths?",
+      "options": [
+        "Current dir",
+        "Parent dir",
+        "Home dir"
+      ],
+      "correctIndex": 1,
+      "explanation": "`..` refers to the parent directory."
+    },
+    {
+      "id": "nav-q4",
+      "type": "single",
+      "question": "Which command finds files by name?",
+      "options": [
+        "grep",
+        "find",
+        "which"
+      ],
+      "correctIndex": 1,
+      "explanation": "`find` searches the filesystem."
+    },
+    {
+      "id": "nav-q5",
+      "type": "single",
+      "question": "Which symbol is home shortcut?",
+      "options": [
+        "~",
+        "/",
+        "$"
+      ],
+      "correctIndex": 0,
+      "explanation": "`~` expands to the user home directory."
+    },
+    {
+      "id": "nav-q6",
+      "type": "single",
+      "question": "What does `pwd` show?",
+      "options": [
+        "List files",
+        "Current directory",
+        "Process id"
+      ],
+      "correctIndex": 1,
+      "explanation": "`pwd` prints working directory."
+    },
+    {
+      "id": "nav-q7",
+      "type": "single",
+      "question": "How to preview end of file?",
+      "options": [
+        "head",
+        "tail",
+        "less"
+      ],
+      "correctIndex": 1,
+      "explanation": "`tail` shows the end of file."
+    },
+    {
+      "id": "nav-q8",
+      "type": "single",
+      "question": "Which wildcard matches any string?",
+      "options": [
+        "?",
+        "*",
+        "[]"
+      ],
+      "correctIndex": 1,
+      "explanation": "`*` matches any string of characters."
+    },
+    {
+      "id": "nav-q9",
+      "type": "single",
+      "question": "Which command creates directories?",
+      "options": [
+        "mkdir",
+        "rmdir",
+        "touch"
+      ],
+      "correctIndex": 0,
+      "explanation": "`mkdir` creates directories."
+    },
+    {
+      "id": "nav-q10",
+      "type": "single",
+      "question": "Which tool updates the locate DB?",
+      "options": [
+        "updatedb",
+        "locate",
+        "find"
+      ],
+      "correctIndex": 0,
+      "explanation": "`updatedb` refreshes the locate database."
+    }
+  ]
+}

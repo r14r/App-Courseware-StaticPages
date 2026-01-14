@@ -1,0 +1,7 @@
+{
+  "id": "t4",
+  "title": "Select boxes",
+  "content": [
+    "<p>st.selectbox() and st.multiselect() for choices.</p>"
+  ]
+}

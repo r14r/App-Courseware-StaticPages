@@ -1,0 +1,9 @@
+{
+  "id": "c2t004",
+  "title": "Home and Tilde",
+  "content": [
+    "<h2>Home directory</h2><p>Your home directory contains your personal files and settings. It is stored in <code>$HOME</code>.</p><pre><code class=\"language-bash\">echo \"$HOME\"\ncd \"$HOME\"\npwd\n</code></pre>",
+    "<h2>Tilde expansion</h2><p><code>~</code> expands to your home directory in the shell.</p><pre><code class=\"language-bash\">cd ~\ncd ~/unix-cli-practice\n</code></pre>",
+    "<h2>Other users (if available)</h2><pre><code class=\"language-bash\"># Some shells support ~username\n# echo ~root\n</code></pre>"
+  ]
+}

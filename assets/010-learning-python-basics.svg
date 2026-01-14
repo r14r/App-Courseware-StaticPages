@@ -1,0 +1,71 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgPython" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"></stop>
+      <stop offset="100%" stop-color="#111827"></stop>
+    </linearGradient>
+    <linearGradient id="snakeBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e"></stop>
+      <stop offset="100%" stop-color="#eab308"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgPython)"></rect>
+
+  <!-- Title -->
+  <text x="80" y="120" fill="#e5e7eb" font-size="60" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    Learning
+  </text>
+  <text x="80" y="190" fill="#facc15" font-size="72" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    Python Basics
+  </text>
+
+  <!-- Code screen -->
+  <rect x="520" y="140" width="580" height="360" rx="26" fill="#020617" stroke="#fcd34d" stroke-width="4"></rect>
+  <rect x="520" y="140" width="580" height="48" rx="26" fill="#020617"></rect>
+  <circle cx="548" cy="164" r="7" fill="#ef4444"></circle>
+  <circle cx="572" cy="164" r="7" fill="#f97316"></circle>
+  <circle cx="596" cy="164" r="7" fill="#22c55e"></circle>
+
+  <!-- Code -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="22">
+    <text x="544" y="210" fill="#a5b4fc"># Simple Python program</text>
+    <text x="544" y="244" fill="#4ade80">def</text>
+    <text x="595" y="244" fill="#e5e7eb">greet(name: str) -&gt; str:</text>
+    <text x="568" y="276" fill="#e5e7eb">return f"Hello, {name}!"</text>
+    <text x="544" y="316" fill="#4ade80">if</text>
+    <text x="575" y="316" fill="#e5e7eb">__name__ == "__main__":</text>
+    <text x="568" y="348" fill="#e5e7eb">print(greet("world"))</text>
+    <text x="544" y="388" fill="#60a5fa"># variables, loops, functions,</text>
+    <text x="544" y="416" fill="#60a5fa"># and more in this course</text>
+  </g>
+
+  <!-- Friendly snake mascot -->
+  <g transform="translate(150,290)">
+    <!-- coils -->
+    <ellipse cx="160" cy="150" rx="130" ry="60" fill="#0f172a"></ellipse>
+    <ellipse cx="160" cy="140" rx="120" ry="48" fill="#0f172a"></ellipse>
+    <ellipse cx="160" cy="140" rx="110" ry="40" fill="url(#snakeBody)"></ellipse>
+    <ellipse cx="160" cy="170" rx="100" ry="38" fill="url(#snakeBody)"></ellipse>
+    <ellipse cx="160" cy="206" rx="90" ry="34" fill="url(#snakeBody)"></ellipse>
+
+    <!-- stripes -->
+    <path d="M80 130 C120 120 200 120 240 130" stroke="#1e293b" stroke-width="10" opacity="0.7"></path>
+    <path d="M80 160 C120 150 200 150 240 160" stroke="#1e293b" stroke-width="10" opacity="0.7"></path>
+    <path d="M85 192 C120 184 200 184 235 192" stroke="#1e293b" stroke-width="10" opacity="0.7"></path>
+
+    <!-- neck -->
+    <rect x="140" y="40" width="40" height="80" rx="20" fill="url(#snakeBody)"></rect>
+
+    <!-- head -->
+    <ellipse cx="160" cy="40" rx="55" ry="44" fill="url(#snakeBody)"></ellipse>
+    <circle cx="144" cy="32" r="9" fill="#f9fafb"></circle>
+    <circle cx="176" cy="32" r="9" fill="#f9fafb"></circle>
+    <circle cx="144" cy="32" r="4" fill="#0f172a"></circle>
+    <circle cx="176" cy="32" r="4" fill="#0f172a"></circle>
+    <path d="M150 50 Q160 60 170 50" stroke="#0f172a" stroke-width="3" fill="none"></path>
+    <!-- tongue -->
+    <path d="M160 58 L160 78 L154 88 M160 78 L166 88" stroke="#ef4444" stroke-width="3" fill="none"></path>
+  </g>
+</svg>

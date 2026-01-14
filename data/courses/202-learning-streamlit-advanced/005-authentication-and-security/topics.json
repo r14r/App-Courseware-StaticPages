@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-auth-options-overview.json",
+    "title": "Auth Options Overview"
+  },
+  {
+    "file": "002-signed-cookies-headers.json",
+    "title": "Signed Cookies & Headers"
+  },
+  {
+    "file": "003-secrets-management.json",
+    "title": "Secrets Management"
+  },
+  {
+    "file": "004-row-level-security-patterns.json",
+    "title": "Row-Level Security Patterns"
+  },
+  {
+    "file": "005-rate-limiting-abuse-prevention.json",
+    "title": "Rate Limiting & Abuse Prevention"
+  },
+  {
+    "file": "006-compliance-pii-handling.json",
+    "title": "Compliance & PII Handling"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

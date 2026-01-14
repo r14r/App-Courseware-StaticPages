@@ -1,0 +1,9 @@
+{
+  "id": "c3t006",
+  "title": "File Types",
+  "content": [
+    "<h2>Common types</h2><ul><li>Regular file: <code>-</code></li><li>Directory: <code>d</code></li><li>Symbolic link: <code>l</code></li></ul>",
+    "<h2>Detecting type with file</h2><pre><code class=\"language-bash\">file /bin/ls\nfile *.json\n</code></pre>",
+    "<h2>Hidden files</h2><p>Files starting with <code>.</code> are hidden by default in <code>ls</code>. Use <code>ls -a</code>.</p>"
+  ]
+}

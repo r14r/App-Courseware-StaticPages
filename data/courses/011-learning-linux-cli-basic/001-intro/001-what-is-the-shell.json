@@ -1,0 +1,17 @@
+{
+  "id": "t1",
+  "title": "What is the Shell?",
+  "content": [
+    "<h2>Overview</h2><p>What is the Shell? focuses on the shell as the command interpreter between you and the OS. This section keeps examples short and safe so you can build confidence.</p>",
+    "<h2>Key ideas</h2><p>Keep these ideas in mind as you work with What is the Shell?:</p><ul><li>Focus on what the shell does and how commands are structured.</li><li>Prefer short, repeatable commands you can reuse later.</li><li>Learn where to get help when you are unsure.</li></ul>",
+    "<h2>Quick start</h2><p>Start with a minimal command and read the output carefully.</p><pre><code class=\"language-bash\">echo \"$SHELL\"\n</code></pre><p>Run it twice so you can see the output change when the environment changes.</p>",
+    "<h2>Example: everyday usage</h2><p>This example mirrors how you will use What is the Shell? in daily work.</p><pre><code class=\"language-bash\">ps -p $$ -o comm=\n</code></pre><p>Notice the order of flags and arguments.</p>",
+    "<h2>Example: common flags</h2><p>Use flags to refine output and reduce noise.</p><pre><code class=\"language-bash\">sh -c \"echo shell runs commands\"\n</code></pre><p>Always check <code>--help</code> if a flag is unclear.</p>",
+    "<h2>Example: working with paths</h2><p>Paths and filenames are the most common sources of mistakes.</p><pre><code class=\"language-bash\">bash --version\n</code></pre><p>Quote paths with spaces to avoid unexpected splits.</p>",
+    "<h2>Example: verification</h2><p>Verify your work after each change to stay safe.</p><pre><code class=\"language-bash\">printf \"hello\\n\" | sh\n</code></pre><p>Get comfortable confirming state before moving on.</p>",
+    "<h2>Pitfalls to avoid</h2><p>Go slowly and re-check the target when a command can change files or permissions. If you are unsure, run a read-only command first.</p>",
+    "<h2>Practice checklist</h2><p>Try the following steps in a practice folder.</p><ol><li>Open a terminal and identify your current shell.</li><li>Run a few core commands and observe the output.</li><li>Use help or man pages to confirm flags.</li></ol>",
+    "<h2>Real-world workflow</h2><p>Combine a short command, a verification step, and a quick note about the result. This habit keeps your work reproducible.</p>",
+    "<h2>Recap</h2><p>You now have a reliable starting point for What is the Shell?. Repeat the examples until the command patterns feel natural.</p>"
+  ]
+}

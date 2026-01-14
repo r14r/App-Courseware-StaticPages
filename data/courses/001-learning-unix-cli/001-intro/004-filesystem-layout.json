@@ -1,0 +1,9 @@
+{
+  "id": "c1t004",
+  "title": "Filesystem Layout",
+  "content": [
+    "<h2>Root and common directories</h2><p>UNIX filesystems are arranged as a tree starting at <code>/</code> (root).</p><ul><li><code>/</code>: root</li><li><code>/etc</code>: system configuration</li><li><code>/usr</code>: userland programs and libraries</li><li><code>/var</code>: variable data (logs, caches)</li><li><code>/tmp</code>: temporary files</li><li><code>/home</code> (Linux) or <code>/Users</code> (macOS): user home directories</li></ul>",
+    "<h2>Explore safely</h2><pre><code class=\"language-bash\">ls /\nls /etc | head\nls /usr/bin | head\n</code></pre>",
+    "<h2>Paths</h2><p><strong>Absolute</strong> paths start with <code>/</code>. <strong>Relative</strong> paths are resolved from the current directory.</p><pre><code class=\"language-bash\">pwd\nls /etc\nls ./\n</code></pre>"
+  ]
+}

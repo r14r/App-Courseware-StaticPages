@@ -1,0 +1,30 @@
+[
+  {
+    "file": "001-session-state-patterns.json",
+    "title": "Session State Patterns"
+  },
+  {
+    "file": "002-callback-orchestration.json",
+    "title": "Callback Orchestration"
+  },
+  {
+    "file": "003-forms-vs-immediate-widgets.json",
+    "title": "Forms vs. Immediate Widgets"
+  },
+  {
+    "file": "004-cross-page-state-sharing.json",
+    "title": "Cross-Page State Sharing"
+  },
+  {
+    "file": "005-url-query-params-for-state.json",
+    "title": "URL Query Params for State"
+  },
+  {
+    "file": "006-undo-redo-and-history.json",
+    "title": "Undo/Redo and History"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

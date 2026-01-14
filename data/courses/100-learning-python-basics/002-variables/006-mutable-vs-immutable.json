@@ -1,0 +1,7 @@
+{
+  "id": "t6",
+  "title": "Mutable vs Immutable",
+  "content": [
+    "<p>Lists are mutable; tuples are immutable.</p>"
+  ]
+}

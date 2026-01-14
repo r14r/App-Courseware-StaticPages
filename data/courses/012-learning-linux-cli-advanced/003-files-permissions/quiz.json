@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "id": "perm-q1",
+      "type": "single",
+      "question": "Which command changes file permissions?",
+      "options": [
+        "chown",
+        "chmod",
+        "chperm"
+      ],
+      "correctIndex": 1,
+      "explanation": "`chmod` changes permissions."
+    },
+    {
+      "id": "perm-q2",
+      "type": "single",
+      "question": "What does 644 mean?",
+      "options": [
+        "rwxr--r--",
+        "rw-r--r--",
+        "rwxrwxrwx"
+      ],
+      "correctIndex": 1,
+      "explanation": "644 => rw- r-- r--."
+    },
+    {
+      "id": "perm-q3",
+      "type": "single",
+      "question": "Which command changes owner?",
+      "options": [
+        "chown",
+        "chmod",
+        "owner"
+      ],
+      "correctIndex": 0,
+      "explanation": "`chown` changes owner and group."
+    },
+    {
+      "id": "perm-q4",
+      "type": "single",
+      "question": "How to create a symbolic link?",
+      "options": [
+        "ln -s",
+        "link",
+        "symlink create"
+      ],
+      "correctIndex": 0,
+      "explanation": "`ln -s target linkname` creates symlink."
+    },
+    {
+      "id": "perm-q5",
+      "type": "single",
+      "question": "Which bit allows executing a file?",
+      "options": [
+        "read bit",
+        "write bit",
+        "execute bit"
+      ],
+      "correctIndex": 2,
+      "explanation": "Execute bit permits running files."
+    },
+    {
+      "id": "perm-q6",
+      "type": "single",
+      "question": "What is the sticky bit commonly used for?",
+      "options": [
+        "Execute permission",
+        "Directory write restriction",
+        "Set UID"
+      ],
+      "correctIndex": 1,
+      "explanation": "Sticky bit restricts deletions in shared dirs."
+    },
+    {
+      "id": "perm-q7",
+      "type": "single",
+      "question": "Which command shows file mode bits?",
+      "options": [
+        "stat",
+        "showperm",
+        "ls -m"
+      ],
+      "correctIndex": 0,
+      "explanation": "`stat` shows detailed file info."
+    },
+    {
+      "id": "perm-q8",
+      "type": "single",
+      "question": "What does setuid do?",
+      "options": [
+        "Run program as file owner",
+        "Grant write to owner",
+        "Hide file"
+      ],
+      "correctIndex": 0,
+      "explanation": "setuid runs program with owner privileges."
+    },
+    {
+      "id": "perm-q9",
+      "type": "single",
+      "question": "Which permission octal gives full rights to owner only?",
+      "options": [
+        "700",
+        "777",
+        "644"
+      ],
+      "correctIndex": 0,
+      "explanation": "700 => rwx for owner, none for others."
+    },
+    {
+      "id": "perm-q10",
+      "type": "single",
+      "question": "Which command edits files in-terminal easily?",
+      "options": [
+        "vi",
+        "nano",
+        "Both"
+      ],
+      "correctIndex": 2,
+      "explanation": "Both `vi` and `nano` are common terminal editors."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "learning-streamlit-advanced",
+  "title": "Learning Streamlit Advanced",
+  "description": "A deep-dive, hands-on course for building production-grade Streamlit apps: advanced layouts, state management, performance tuning, security, custom components, deployment, testing, and enterprise patterns.",
+  "chapters": [
+    {
+      "id": "001-advanced-layouts",
+      "title": "Advanced Layouts"
+    },
+    {
+      "id": "002-state-and-callbacks",
+      "title": "State and Callbacks"
+    },
+    {
+      "id": "003-performance-and-caching",
+      "title": "Performance and Caching"
+    },
+    {
+      "id": "004-dataviz-integrations",
+      "title": "Dataviz Integrations"
+    },
+    {
+      "id": "005-authentication-and-security",
+      "title": "Authentication and Security"
+    },
+    {
+      "id": "006-multipage-and-architecture",
+      "title": "Multipage and Architecture"
+    },
+    {
+      "id": "007-custom-components",
+      "title": "Custom Components"
+    },
+    {
+      "id": "008-deployment-and-devops",
+      "title": "Deployment and DevOps"
+    },
+    {
+      "id": "009-testing-monitoring-telemetry",
+      "title": "Testing, Monitoring, Telemetry"
+    },
+    {
+      "id": "010-enterprise-patterns",
+      "title": "Enterprise Patterns"
+    }
+  ]
+}

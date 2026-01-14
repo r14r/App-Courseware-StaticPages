@@ -1,0 +1,89 @@
+{
+  "id": "enterprise-patterns-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about localization & i18n is most accurate?",
+        "choices": [
+          "Localization & i18n always requires external services to work in Streamlit.",
+          "Localization & i18n is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Localization & i18n is deprecated and should be avoided in all Streamlit apps.",
+          "Localization & i18n only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Localization & i18n is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about offline-first patterns is most accurate?",
+        "choices": [
+          "Offline-first Patterns always requires external services to work in Streamlit.",
+          "Offline-first Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Offline-first Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Offline-first Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Offline-first Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about design systems in streamlit is most accurate?",
+        "choices": [
+          "Design Systems in Streamlit always requires external services to work in Streamlit.",
+          "Design Systems in Streamlit is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Design Systems in Streamlit is deprecated and should be avoided in all Streamlit apps.",
+          "Design Systems in Streamlit only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Design Systems in Streamlit is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about localization & i18n is most accurate?",
+        "choices": [
+          "Localization & i18n always requires external services to work in Streamlit.",
+          "Localization & i18n is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Localization & i18n is deprecated and should be avoided in all Streamlit apps.",
+          "Localization & i18n only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Localization & i18n is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about design systems in streamlit is most accurate?",
+        "choices": [
+          "Design Systems in Streamlit always requires external services to work in Streamlit.",
+          "Design Systems in Streamlit is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Design Systems in Streamlit is deprecated and should be avoided in all Streamlit apps.",
+          "Design Systems in Streamlit only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Design Systems in Streamlit is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Enterprise Patterns', which statement about offline-first patterns is most accurate?",
+        "choices": [
+          "Offline-first Patterns always requires external services to work in Streamlit.",
+          "Offline-first Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Offline-first Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Offline-first Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Offline-first Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

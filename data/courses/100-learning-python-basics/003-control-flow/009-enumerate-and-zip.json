@@ -1,0 +1,7 @@
+{
+  "id": "t9",
+  "title": "Enumerate and zip",
+  "content": [
+    "<p>Use enumerate() and zip() to iterate with indices.</p>"
+  ]
+}

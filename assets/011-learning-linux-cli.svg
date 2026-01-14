@@ -1,0 +1,61 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgLinux" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"></stop>
+      <stop offset="100%" stop-color="#0f172a"></stop>
+    </linearGradient>
+    <linearGradient id="screenLinux" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16a34a"></stop>
+      <stop offset="100%" stop-color="#15803d"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgLinux)"></rect>
+
+  <!-- Title -->
+  <text x="80" y="120" fill="#e5e7eb" font-size="60" font-weight="700" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    Learning
+  </text>
+  <text x="80" y="190" fill="#22c55e" font-size="72" font-weight="800" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    Linux Command Line
+  </text>
+
+  <!-- Terminal screen -->
+  <rect x="520" y="120" width="580" height="360" rx="26" fill="#020617" stroke="#22c55e" stroke-width="4"></rect>
+  <rect x="520" y="120" width="580" height="52" rx="26" fill="#020617"></rect>
+  <circle cx="550" cy="146" r="8" fill="#ef4444"></circle>
+  <circle cx="578" cy="146" r="8" fill="#f97316"></circle>
+  <circle cx="606" cy="146" r="8" fill="#22c55e"></circle>
+
+  <!-- Code lines -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace" font-size="22" fill="#bbf7d0">
+    <text x="550" y="210">$ ls -l</text>
+    <text x="550" y="246">$ cd /home/student</text>
+    <text x="550" y="282">$ mkdir projects</text>
+    <text x="550" y="318">$ nano notes.txt</text>
+    <text x="550" y="354">$ man ls</text>
+    <text x="550" y="390">$ grep -r "TODO" .</text>
+  </g>
+
+  <!-- Simplified penguin mascot (generic, not Tux) -->
+  <g transform="translate(140,300) scale(1.2)">
+    <!-- body -->
+    <ellipse cx="120" cy="120" rx="90" ry="110" fill="#020617"></ellipse>
+    <ellipse cx="120" cy="140" rx="60" ry="80" fill="#f9fafb"></ellipse>
+    <!-- head -->
+    <circle cx="120" cy="60" r="55" fill="#020617"></circle>
+    <circle cx="100" cy="50" r="11" fill="#f9fafb"></circle>
+    <circle cx="140" cy="50" r="11" fill="#f9fafb"></circle>
+    <circle cx="100" cy="50" r="5" fill="#020617"></circle>
+    <circle cx="140" cy="50" r="5" fill="#020617"></circle>
+    <!-- beak -->
+    <polygon points="120,60 95,82 145,82" fill="#f59e0b"></polygon>
+    <!-- feet -->
+    <ellipse cx="80" cy="220" rx="45" ry="24" fill="#f59e0b"></ellipse>
+    <ellipse cx="160" cy="220" rx="45" ry="24" fill="#f59e0b"></ellipse>
+    <!-- wings -->
+    <ellipse cx="40" cy="135" rx="30" ry="70" fill="#020617"></ellipse>
+    <ellipse cx="200" cy="135" rx="30" ry="70" fill="#020617"></ellipse>
+  </g>
+</svg>

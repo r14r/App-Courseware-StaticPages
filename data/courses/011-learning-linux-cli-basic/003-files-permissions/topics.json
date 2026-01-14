@@ -1,0 +1,46 @@
+[
+  {
+    "file": "001-file-ownership.json",
+    "title": "File Ownership"
+  },
+  {
+    "file": "002-file-permissions.json",
+    "title": "File Permissions"
+  },
+  {
+    "file": "003-changing-permissions.json",
+    "title": "Changing Permissions"
+  },
+  {
+    "file": "004-changing-ownership.json",
+    "title": "Changing Ownership"
+  },
+  {
+    "file": "005-editing-files.json",
+    "title": "Editing Files"
+  },
+  {
+    "file": "006-file-types.json",
+    "title": "File Types"
+  },
+  {
+    "file": "007-symbolic-links.json",
+    "title": "Symbolic Links"
+  },
+  {
+    "file": "008-permissions-numeric-mode.json",
+    "title": "Permissions Numeric Mode"
+  },
+  {
+    "file": "009-sticky-setuid.json",
+    "title": "Sticky Setuid"
+  },
+  {
+    "file": "010-safe-editing.json",
+    "title": "Safe Editing"
+  },
+  {
+    "file": "quiz.json",
+    "title": "Quiz"
+  }
+]

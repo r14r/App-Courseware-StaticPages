@@ -1,0 +1,76 @@
+{
+  "id": "c2quiz",
+  "title": "Quiz",
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "What does `cd -` do?",
+        "choices": [
+          "Changes to root",
+          "Changes to your home directory",
+          "Changes to the previous directory",
+          "Prints the current directory"
+        ],
+        "answerIndex": 2,
+        "explanation": "`cd -` toggles back to the last working directory."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "Which is a relative path?",
+        "choices": [
+          "/etc/hosts",
+          "docs/readme.md",
+          "/usr/bin",
+          "/tmp/file"
+        ],
+        "answerIndex": 1,
+        "explanation": "Relative paths do not start with '/'."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "Who expands `~` to your home directory?",
+        "choices": [
+          "The kernel",
+          "The shell",
+          "grep",
+          "ls"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tilde expansion is performed by the shell."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "Globbing is performed by...",
+        "choices": [
+          "The shell",
+          "The program being run",
+          "The filesystem",
+          "The terminal emulator"
+        ],
+        "answerIndex": 0,
+        "explanation": "The shell expands wildcard patterns before executing the command."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "When is `less` preferable to `cat`?",
+        "choices": [
+          "When you need to edit a file",
+          "When you need a scrollable viewer for large output",
+          "When you need to delete a file",
+          "When you need to change permissions"
+        ],
+        "answerIndex": 1,
+        "explanation": "`less` lets you scroll and search, ideal for large files."
+      }
+    ]
+  },
+  "content": [
+    "<h2>Quiz: Navigation</h2><ol><li>What does <code>cd -</code> do?</li><li>What is the difference between absolute and relative paths?</li><li>What expands <code>~</code>?</li><li>What is globbing and who performs it?</li><li>When would you prefer <code>less</code> over <code>cat</code>?</li></ol>"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "c1t002",
+  "title": "Starting a Terminal",
+  "content": [
+    "<h2>Where to open a terminal</h2><ul><li><strong>macOS</strong>: Terminal.app or iTerm2</li><li><strong>Linux</strong>: GNOME Terminal, Konsole, or your desktop’s terminal</li><li><strong>Remote</strong>: SSH from a local terminal</li></ul>",
+    "<h2>Prompt anatomy</h2><p>A prompt often shows user, host, and current directory. Example:</p><pre><code class=\"language-bash\">ralph@macbook unix-cli-practice %\n</code></pre><p>The symbols differ by shell. The important part is: the shell is ready for a command.</p>",
+    "<h2>Check which shell you are using</h2><pre><code class=\"language-bash\">echo \"$SHELL\"\nps -p $$ -o comm=\n</code></pre>",
+    "<h2>Create a safe practice folder</h2><pre><code class=\"language-bash\">mkdir -p ~/unix-cli-practice\ncd ~/unix-cli-practice\npwd\n</code></pre>",
+    "<h2>Keyboard basics</h2><ul><li><code>Ctrl+C</code>: interrupt current program</li><li><code>Ctrl+D</code>: end of input (often exits shells/programs)</li><li><code>Ctrl+L</code>: clear screen (like <code>clear</code>)</li></ul>"
+  ]
+}

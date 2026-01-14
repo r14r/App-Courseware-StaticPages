@@ -1,0 +1,89 @@
+{
+  "id": "performance-and-caching-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about batching & debouncing inputs is most accurate?",
+        "choices": [
+          "Batching & Debouncing Inputs always requires external services to work in Streamlit.",
+          "Batching & Debouncing Inputs is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Batching & Debouncing Inputs is deprecated and should be avoided in all Streamlit apps.",
+          "Batching & Debouncing Inputs only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Batching & Debouncing Inputs is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about st.cache_data deep dive is most accurate?",
+        "choices": [
+          "st.cache_data Deep Dive always requires external services to work in Streamlit.",
+          "st.cache_data Deep Dive is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "st.cache_data Deep Dive is deprecated and should be avoided in all Streamlit apps.",
+          "st.cache_data Deep Dive only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "st.cache_data Deep Dive is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about batching & debouncing inputs is most accurate?",
+        "choices": [
+          "Batching & Debouncing Inputs always requires external services to work in Streamlit.",
+          "Batching & Debouncing Inputs is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Batching & Debouncing Inputs is deprecated and should be avoided in all Streamlit apps.",
+          "Batching & Debouncing Inputs only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Batching & Debouncing Inputs is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about profiling streamlit apps is most accurate?",
+        "choices": [
+          "Profiling Streamlit Apps always requires external services to work in Streamlit.",
+          "Profiling Streamlit Apps is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Profiling Streamlit Apps is deprecated and should be avoided in all Streamlit apps.",
+          "Profiling Streamlit Apps only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Profiling Streamlit Apps is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about st.cache_data deep dive is most accurate?",
+        "choices": [
+          "st.cache_data Deep Dive always requires external services to work in Streamlit.",
+          "st.cache_data Deep Dive is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "st.cache_data Deep Dive is deprecated and should be avoided in all Streamlit apps.",
+          "st.cache_data Deep Dive only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "st.cache_data Deep Dive is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Performance and Caching', which statement about st.cache_data deep dive is most accurate?",
+        "choices": [
+          "st.cache_data Deep Dive always requires external services to work in Streamlit.",
+          "st.cache_data Deep Dive is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "st.cache_data Deep Dive is deprecated and should be avoided in all Streamlit apps.",
+          "st.cache_data Deep Dive only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "st.cache_data Deep Dive is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

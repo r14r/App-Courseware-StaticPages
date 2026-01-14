@@ -1,0 +1,89 @@
+{
+  "id": "testing-monitoring-telemetry-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about logging & observability is most accurate?",
+        "choices": [
+          "Logging & Observability always requires external services to work in Streamlit.",
+          "Logging & Observability is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Logging & Observability is deprecated and should be avoided in all Streamlit apps.",
+          "Logging & Observability only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Logging & Observability is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about logging & observability is most accurate?",
+        "choices": [
+          "Logging & Observability always requires external services to work in Streamlit.",
+          "Logging & Observability is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Logging & Observability is deprecated and should be avoided in all Streamlit apps.",
+          "Logging & Observability only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Logging & Observability is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about synthetic monitoring is most accurate?",
+        "choices": [
+          "Synthetic Monitoring always requires external services to work in Streamlit.",
+          "Synthetic Monitoring is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Synthetic Monitoring is deprecated and should be avoided in all Streamlit apps.",
+          "Synthetic Monitoring only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Synthetic Monitoring is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about logging & observability is most accurate?",
+        "choices": [
+          "Logging & Observability always requires external services to work in Streamlit.",
+          "Logging & Observability is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Logging & Observability is deprecated and should be avoided in all Streamlit apps.",
+          "Logging & Observability only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Logging & Observability is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about unit & integration testing is most accurate?",
+        "choices": [
+          "Unit & Integration Testing always requires external services to work in Streamlit.",
+          "Unit & Integration Testing is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Unit & Integration Testing is deprecated and should be avoided in all Streamlit apps.",
+          "Unit & Integration Testing only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Unit & Integration Testing is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Testing, Monitoring, Telemetry', which statement about error handling patterns is most accurate?",
+        "choices": [
+          "Error Handling Patterns always requires external services to work in Streamlit.",
+          "Error Handling Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Error Handling Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Error Handling Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Error Handling Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

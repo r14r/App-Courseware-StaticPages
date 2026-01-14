@@ -1,5 +1,0 @@
-{
-  "id": "t1",
-  "title": "Buttons",
-  "contentHtml": "<p>Use st.button() to trigger actions.</p>"
-}

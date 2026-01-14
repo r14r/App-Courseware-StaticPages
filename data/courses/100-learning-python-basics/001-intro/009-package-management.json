@@ -1,0 +1,7 @@
+{
+  "id": "t9",
+  "title": "Package management",
+  "content": [
+    "<p>Use pip to install packages.</p>"
+  ]
+}

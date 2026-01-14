@@ -1,0 +1,8 @@
+{
+  "id": "c3t008",
+  "title": "Permissions Numeric Mode",
+  "content": [
+    "<h2>Numeric permissions</h2><p>Numeric mode (octal) encodes <code>r=4</code>, <code>w=2</code>, <code>x=1</code> per class (user/group/other).</p><ul><li><code>755</code> = <code>rwxr-xr-x</code></li><li><code>644</code> = <code>rw-r--r--</code></li><li><code>600</code> = <code>rw-------</code></li></ul><pre><code class=\"language-bash\">chmod 755 hello.sh\nchmod 644 notes.txt\nchmod 600 secret.txt\nls -l hello.sh notes.txt secret.txt\n</code></pre>",
+    "<h2>Practice</h2><p>Create a file, set it to 640, and verify the bits via <code>ls -l</code>.</p><pre><code class=\"language-bash\">touch report.txt\nchmod 640 report.txt\nls -l report.txt\n</code></pre>"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "dataviz-integrations-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about altair advanced interactions is most accurate?",
+        "choices": [
+          "Altair Advanced Interactions always requires external services to work in Streamlit.",
+          "Altair Advanced Interactions is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Altair Advanced Interactions is deprecated and should be avoided in all Streamlit apps.",
+          "Altair Advanced Interactions only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Altair Advanced Interactions is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about plotly + streamlit patterns is most accurate?",
+        "choices": [
+          "Plotly + Streamlit Patterns always requires external services to work in Streamlit.",
+          "Plotly + Streamlit Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Plotly + Streamlit Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Plotly + Streamlit Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Plotly + Streamlit Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about plotly + streamlit patterns is most accurate?",
+        "choices": [
+          "Plotly + Streamlit Patterns always requires external services to work in Streamlit.",
+          "Plotly + Streamlit Patterns is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Plotly + Streamlit Patterns is deprecated and should be avoided in all Streamlit apps.",
+          "Plotly + Streamlit Patterns only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Plotly + Streamlit Patterns is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about crossfiltering techniques is most accurate?",
+        "choices": [
+          "Crossfiltering Techniques always requires external services to work in Streamlit.",
+          "Crossfiltering Techniques is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Crossfiltering Techniques is deprecated and should be avoided in all Streamlit apps.",
+          "Crossfiltering Techniques only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Crossfiltering Techniques is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about crossfiltering techniques is most accurate?",
+        "choices": [
+          "Crossfiltering Techniques always requires external services to work in Streamlit.",
+          "Crossfiltering Techniques is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Crossfiltering Techniques is deprecated and should be avoided in all Streamlit apps.",
+          "Crossfiltering Techniques only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Crossfiltering Techniques is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Dataviz Integrations', which statement about altair advanced interactions is most accurate?",
+        "choices": [
+          "Altair Advanced Interactions always requires external services to work in Streamlit.",
+          "Altair Advanced Interactions is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Altair Advanced Interactions is deprecated and should be avoided in all Streamlit apps.",
+          "Altair Advanced Interactions only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Altair Advanced Interactions is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

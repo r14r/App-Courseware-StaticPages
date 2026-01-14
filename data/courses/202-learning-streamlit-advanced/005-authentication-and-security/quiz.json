@@ -1,0 +1,89 @@
+{
+  "id": "authentication-and-security-quiz",
+  "title": "Quiz",
+  "content": [
+    "<h2>Chapter Quiz</h2><p>Answer the following questions to check your understanding of this chapter's topics.</p>"
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about rate limiting & abuse prevention is most accurate?",
+        "choices": [
+          "Rate Limiting & Abuse Prevention always requires external services to work in Streamlit.",
+          "Rate Limiting & Abuse Prevention is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Rate Limiting & Abuse Prevention is deprecated and should be avoided in all Streamlit apps.",
+          "Rate Limiting & Abuse Prevention only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Rate Limiting & Abuse Prevention is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q2",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about signed cookies & headers is most accurate?",
+        "choices": [
+          "Signed Cookies & Headers always requires external services to work in Streamlit.",
+          "Signed Cookies & Headers is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Signed Cookies & Headers is deprecated and should be avoided in all Streamlit apps.",
+          "Signed Cookies & Headers only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Signed Cookies & Headers is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q3",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about compliance & pii handling is most accurate?",
+        "choices": [
+          "Compliance & PII Handling always requires external services to work in Streamlit.",
+          "Compliance & PII Handling is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Compliance & PII Handling is deprecated and should be avoided in all Streamlit apps.",
+          "Compliance & PII Handling only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Compliance & PII Handling is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q4",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about compliance & pii handling is most accurate?",
+        "choices": [
+          "Compliance & PII Handling always requires external services to work in Streamlit.",
+          "Compliance & PII Handling is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Compliance & PII Handling is deprecated and should be avoided in all Streamlit apps.",
+          "Compliance & PII Handling only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Compliance & PII Handling is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q5",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about compliance & pii handling is most accurate?",
+        "choices": [
+          "Compliance & PII Handling always requires external services to work in Streamlit.",
+          "Compliance & PII Handling is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Compliance & PII Handling is deprecated and should be avoided in all Streamlit apps.",
+          "Compliance & PII Handling only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Compliance & PII Handling is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      },
+      {
+        "id": "q6",
+        "type": "single",
+        "question": "In the context of 'Authentication and Security', which statement about rate limiting & abuse prevention is most accurate?",
+        "choices": [
+          "Rate Limiting & Abuse Prevention always requires external services to work in Streamlit.",
+          "Rate Limiting & Abuse Prevention is useful in some cases, but you should evaluate complexity and UX trade-offs.",
+          "Rate Limiting & Abuse Prevention is deprecated and should be avoided in all Streamlit apps.",
+          "Rate Limiting & Abuse Prevention only works when running Streamlit in Docker."
+        ],
+        "answerIndex": 1,
+        "explanation": "Rate Limiting & Abuse Prevention is a powerful pattern, but like most advanced techniques, it should be used judiciously with attention to user impact and maintainability."
+      }
+    ]
+  }
+}

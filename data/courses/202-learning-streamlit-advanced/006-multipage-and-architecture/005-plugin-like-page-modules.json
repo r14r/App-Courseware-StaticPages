@@ -1,0 +1,13 @@
+{
+  "id": "t035",
+  "title": "Plugin-like Page Modules",
+  "content": [
+    "<h2>Concept</h2><p>This topic explores plugin-like page modules within the context of Streamlit. You will learn how to apply the concept to build robust, maintainable, and user-friendly apps.</p>",
+    "<h2>Why it matters</h2><p>Advanced Streamlit patterns let you ship production-ready apps with fewer surprises. Mastery here improves user experience, performance, and long-term maintainability.</p>",
+    "<h2>Core APIs / Syntax</h2><p>Below are minimal examples that illustrate the essential APIs and patterns.</p>",
+    "<pre><code class=\"hljs language-python\">import streamlit as st\n\nst.title(\"Multipage and Architecture — Plugin-like Page Modules\")\nst.write(\"Hello from an advanced example.\")</code></pre>",
+    "<pre><code class=\"hljs language-python\">import streamlit as st\n\nst.sidebar.title(\"Navigation\")\npage = st.sidebar.radio(\"Go to\", [\"Home\", \"Reports\", \"Admin\"])\nif page == \"Home\":\n    st.write(\"Welcome Home\")\nelif page == \"Reports\":\n    st.write(\"Reports Section\")\nelse:\n    st.write(\"Admin Tools\")</code></pre>",
+    "<h2>Common pitfalls</h2><p>• Overusing reruns without caching can cause sluggish UIs.\n• Global mutable state can create race conditions with callbacks.\n• Disconnected page-level state harms UX.\n• Not profiling heavy code paths leads to timeouts.</p>",
+    "<h2>Practice</h2><p>1) Extend the example to a realistic scenario.\n2) Add validation and error handling.\n3) Measure the impact (latency, memory) and document your findings.</p>"
+  ]
+}

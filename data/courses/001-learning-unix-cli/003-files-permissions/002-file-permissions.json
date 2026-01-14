@@ -1,0 +1,9 @@
+{
+  "id": "c3t002",
+  "title": "File Permissions",
+  "content": [
+    "<h2>Permission bits</h2><p>Permissions are defined for three classes:</p><ul><li>user (u): owner</li><li>group (g)</li><li>other (o): everyone else</li></ul><p>And three actions:</p><ul><li>read (r)</li><li>write (w)</li><li>execute (x)</li></ul>",
+    "<h2>Reading ls -l output</h2><pre><code class=\"language-bash\">ls -l\n# -rw-r--r--  1 user group  123 Jan 01 12:00 file.txt\n# drwxr-xr-x  3 user group   96 Jan 01 12:00 dir\n</code></pre>",
+    "<h2>Execute on directories</h2><p>On directories, <code>x</code> means you can traverse (enter) the directory. Without <code>x</code>, you cannot access files inside, even if you can list names.</p>"
+  ]
+}

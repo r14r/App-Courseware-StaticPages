@@ -1,0 +1,19 @@
+{
+  "id": "learning-unix-cli",
+  "title": "Learning the UNIX Command Line",
+  "description": "A practical, beginner-friendly introduction to the UNIX command line: shell fundamentals, navigation, files, permissions, text processing, and safe day-to-day terminal workflows.",
+  "chapters": [
+    {
+      "id": "001-intro",
+      "title": "Introduction to the UNIX Shell"
+    },
+    {
+      "id": "002-navigation",
+      "title": "Navigating the Filesystem"
+    },
+    {
+      "id": "003-files-permissions",
+      "title": "Files, Editing, and Permissions"
+    }
+  ]
+}
