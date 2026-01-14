@@ -1,0 +1,10 @@
+{
+  "id": "002-symmetric-cyclic-schur",
+  "title": "Symmetric & Cyclic Sums; Schur and Muirhead",
+  "content": [
+    "<h2>Overview</h2><p>Learn notations <em>\\sum_{sym}</em> and <em>\\sum_{cyc}</em>. Schur's inequality unlocks many symmetric inequalities; Muirhead orders symmetric sums.</p>",
+    "<h2>Schur (r=1)</h2><p><em>\\sum a^3+3abc \\ge \\sum_{sym} a^2b</em> for <em>a,b,c\\ge 0</em>. Often combined with AM-GM and rearrangement.</p>",
+    "<h2>Hard Problem</h2><p>For <em>a,b,c\\ge 0</em>, prove <em>\\sum \\frac{a^4}{(a+b)(a+c)} \\ge \\frac{1}{2}\\sum a^2</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Apply Cauchy in Engel form and Schur to bound cross terms after homogenization.</p>"
+  ]
+}

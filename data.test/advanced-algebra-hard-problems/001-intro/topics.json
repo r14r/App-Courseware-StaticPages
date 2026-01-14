@@ -1,0 +1,18 @@
+[
+  {
+    "file": "001-advanced-polynomial-identities.json",
+    "title": "Advanced Polynomial Identities (Newton, Vieta, Symmetry)"
+  },
+  {
+    "file": "002-inequality-toolkit.json",
+    "title": "Inequality Toolkit (Cauchy, Jensen, Rearrangement)"
+  },
+  {
+    "file": "003-diophantine-tools.json",
+    "title": "Diophantine Tools (Bounds, Descent, LTE)"
+  },
+  {
+    "file": "004-functional-equations-basics.json",
+    "title": "Functional Equations Basics (Injectivity, Cauchy Pitfalls)"
+  }
+]

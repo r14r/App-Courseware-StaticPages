@@ -1,0 +1,12 @@
+{
+  "id": "003-diophantine-tools",
+  "title": "Diophantine Tools (Bounds, Descent, LTE)",
+  "content": [
+    "<h2>Overview</h2><p>Powerful methods include bounding, infinite descent, and the Lifting The Exponent (LTE) lemma for valuations.</p>",
+    "<h2>Infinite Descent</h2><p>Assume minimal solution exists; construct a smaller one to contradict minimality.</p>",
+    "<h2>LTE</h2><p>If <em>v_p</em> is the p-adic valuation and <em>p</em> odd prime dividing <em>a-b</em>, then <em>v_p(a^n-b^n)=v_p(a-b)+v_p(n)</em> with mild conditions.</p>",
+    "<pre><code class=\"language-python\"># Quick valuation helper\nimport math\n\ndef v_p(n,p):\n    c=0\n    while n%p==0:\n        n//=p\n        c+=1\n    return c\nprint(v_p(2**10-1, 3))  # v_3(1023)\n</code></pre>",
+    "<h2>Hard Problem</h2><p>Find all integers <em>n\\ge 1</em> such that <em>3^n+1</em> is divisible by <em>2n+1</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Use LTE on <em>3^{2k+1}+1</em> and order arguments modulo small primes; check small cases and apply bounds.</p>"
+  ]
+}

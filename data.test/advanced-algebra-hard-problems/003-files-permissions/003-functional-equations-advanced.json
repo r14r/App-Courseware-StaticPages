@@ -1,0 +1,10 @@
+{
+  "id": "003-functional-equations-advanced",
+  "title": "Functional Equations: Advanced Techniques",
+  "content": [
+    "<h2>Overview</h2><p>Use substitution frameworks (e.g., set <em>x=y</em>, <em>y=0</em>), injectivity/symmetry, bounding, and search for polynomial forms.</p>",
+    "<h2>Hard Problem</h2><p>Find all functions <em>f:\\mathbb{R}\\to\\mathbb{R}</em> such that <em>f(x+f(y))=f(x)+y</em> for all reals <em>x,y</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Put <em>x=0</em> to see surjectivity; deduce injectivity; conclude <em>f(x)=x+c</em> then pin down <em>c=0</em>.</p>",
+    "<pre><code class=\"language-python\"># Verify candidate f(x)=x works\nimport random\nfor _ in range(10):\n    x,y=[random.uniform(-5,5) for __ in range(2)]\n    f=lambda t:t\n    assert abs((f(x+f(y)))-(f(x)+y))&lt;1e-9\nprint(\"works\")\n</code></pre>"
+  ]
+}

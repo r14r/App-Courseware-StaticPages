@@ -1,0 +1,19 @@
+{
+  "id": "advanced-algebra-hard-problems",
+  "title": "Advanced Algebra: Hard Problems",
+  "description": "A compact, high-intensity chapter set on advanced algebra problem-solving: inequalities, Diophantine equations, functional equations, and polynomial techniques. Includes hard problems with solution sketches.",
+  "chapters": [
+    {
+      "id": "001-intro",
+      "title": "Foundations & Techniques"
+    },
+    {
+      "id": "002-navigation",
+      "title": "Problem-Solving Navigation"
+    },
+    {
+      "id": "003-files-permissions",
+      "title": "Structures & Advanced Topics"
+    }
+  ]
+}

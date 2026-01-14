@@ -9,6 +9,42 @@ body {
   line-height: 1.6;
 }
 
+/* Album hover card reveal */
+.album-card {
+  position: relative;
+  overflow: visible;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.album-card .card-img-top {
+  position: relative;
+  z-index: 1;
+}
+
+.album-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.album-card__body {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.album-card:hover .card-img-top,
+.album-card:focus-within .card-img-top {
+  transform: scale(1.1);
+}
+
+.album-card:hover,
+.album-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
 /* Phantom-style course grid */
 :root {
   --ink: #1b1b1b;
@@ -209,6 +245,7 @@ body.phantom-body {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  z-index: 5;
 }
 
 .balloon {

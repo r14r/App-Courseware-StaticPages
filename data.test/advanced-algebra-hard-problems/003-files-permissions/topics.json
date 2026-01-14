@@ -1,0 +1,18 @@
+[
+  {
+    "file": "001-lte-deep-dive.json",
+    "title": "LTE (Lifting The Exponent) Deep Dive"
+  },
+  {
+    "file": "002-symmetric-cyclic-schur.json",
+    "title": "Symmetric & Cyclic Sums; Schur and Muirhead"
+  },
+  {
+    "file": "003-functional-equations-advanced.json",
+    "title": "Functional Equations: Advanced Techniques"
+  },
+  {
+    "file": "004-advanced-polynomials-roots.json",
+    "title": "Advanced Polynomials: Roots & Irreducibility"
+  }
+]

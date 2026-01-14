@@ -55,14 +55,14 @@ document.addEventListener('alpine:init', () => {
     async init() {
       // index.json contains an array of course folder slugs
       const idx = await fetchJson('/data/courses/index.json');
-      console.log('courses index.json:', idx);
+
       if (!idx || !Array.isArray(idx)) return;
 
       const list = [];
       for (const item of idx) {
         const slug = item.slug || item;
         const course = await fetchJson(`/data/courses/${slug}/course.json`);
-        console.log(`course.json for ${slug}:`, course);
+
         if (course) {
           list.push({ slug, title: course.title, description: course.description || '', id: course.id || slug });
         }
@@ -281,6 +281,7 @@ document.addEventListener('alpine:init', () => {
     answers: {},
     quizState: 'in-progress',
     courseLink: '#',
+    currentIndex: 0,
     async init() {
       const params = new URLSearchParams(window.location.search);
       this.slug = params.get('id');
@@ -292,7 +293,36 @@ document.addEventListener('alpine:init', () => {
         quiz = await fetchJson(`/data/courses/${this.slug}/chapters/${this.chapter}/quiz.json`);
       }
       this.quiz = normalizeQuiz(quiz);
-      if (this.quiz) this.title = this.quiz.title || 'Quiz';
+      if (this.quiz) {
+        this.title = this.quiz.title || 'Quiz';
+        this.currentIndex = 0;
+      }
+    },
+    get currentQuestion() {
+      if (!this.quiz) return null;
+      return this.quiz.questions[this.currentIndex] || null;
+    },
+    progressPercent() {
+      if (!this.quiz || !this.quiz.questions.length) return 0;
+      return Math.round(((this.currentIndex + 1) / this.quiz.questions.length) * 100);
+    },
+    nextLabel() {
+      if (!this.quiz) return 'Next';
+      return this.currentIndex === this.quiz.questions.length - 1 ? 'Submit Quiz' : 'Next';
+    },
+    handleNext() {
+      if (!this.quiz) return;
+      const current = this.currentQuestion;
+      if (!current) return;
+      if (this.answers[current.id] === undefined) {
+        alert('Please answer the question');
+        return;
+      }
+      if (this.currentIndex < this.quiz.questions.length - 1) {
+        this.currentIndex += 1;
+        return;
+      }
+      this.submitQuiz();
     },
     submitQuiz() {
       if (!this.quiz) return;

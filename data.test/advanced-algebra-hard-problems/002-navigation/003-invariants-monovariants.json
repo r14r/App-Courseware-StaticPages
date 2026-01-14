@@ -1,0 +1,10 @@
+{
+  "id": "003-invariants-monovariants",
+  "title": "Invariants and Monovariants in Algebraic Processes",
+  "content": [
+    "<h2>Overview</h2><p>Define a measure that is preserved (invariant) or strictly decreases (monovariant) under an algebraic operation.</p>",
+    "<h2>Hard Problem</h2><p>Start with integers <em>a,b</em>. Replace <em>(a,b)</em> by <em>(|a-b|,\\min(a,b))</em> repeatedly. Show the process ends with <em>(d,d)</em> where <em>d=\\gcd(a,b)</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Use monovariant <em>a+b</em> and invariant <em>\\gcd(a,b)</em>. Conclude termination and correctness.</p>",
+    "<pre><code class=\"language-python\">def process(a,b):\n    seen=0\n    while (a,b)!=(0,0) and a!=b and seen&lt;100:\n        a,b = (abs(a-b), min(a,b))\n        seen+=1\n    return a,b\nprint(process(84,36))\n</code></pre>"
+  ]
+}

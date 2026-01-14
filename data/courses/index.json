@@ -1,23 +1,23 @@
 [
   {
-    "slug": "001-learning-unix-cli"
+    "slug": "learning-linux-cli-basic"
   },
   {
-    "slug": "011-learning-linux-cli"
+    "slug": "learning-linux-cli-advanced"
   },
   {
-    "slug": "012-learning-linux-cli-advanced"
+    "slug": "learning-linux-cli-expert"
   },
   {
-    "slug": "013-learning-linux-cli-expert"
+    "slug": "learning-python-basics"
   },
   {
-    "slug": "100-learning-python-basics"
+    "slug": "learning-streamlit-advanced"
   },
   {
-    "slug": "201-learning-streamlit-basics"
+    "slug": "learning-streamlit-basics"
   },
   {
-    "slug": "202-learning-streamlit-advanced"
+    "slug": "learning-unix-cli-basics"
   }
 ]

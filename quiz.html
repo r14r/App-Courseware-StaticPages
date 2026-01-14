@@ -8,7 +8,12 @@
   <body class="bg-light" x-data="demoQuizPage" x-init="init()">
     <header class="bg-white border-bottom">
       <div class="container py-3">
-        <h1 class="h5 mb-0" x-text="title"></h1>
+        <h1 class="h5 mb-2" x-text="title"></h1>
+        <template x-if="quiz">
+          <div class="progress" role="progressbar" :aria-valuenow="progressPercent()" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" :style="`width: ${progressPercent()}%`"></div>
+          </div>
+        </template>
       </div>
     </header>
 
@@ -22,23 +27,22 @@
 
           <template x-if="quiz">
             <div>
+              <div class="mb-3 text-muted small" x-text="`Question ${currentIndex + 1} of ${quiz.questions.length}`"></div>
               <form>
-                <template x-for="(q, qidx) in quiz.questions" :key="q.id">
-                  <fieldset class="mb-3">
-                    <legend class="fw-medium" x-text="(qidx+1) + '. ' + q.question"></legend>
-                    <div>
-                      <template x-for="(opt, oidx) in q.options" :key="oidx">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" :name="q.id" :value="oidx" x-model="answers[q.id]" />
-                          <label class="form-check-label" x-text="opt"></label>
-                        </div>
-                      </template>
-                    </div>
-                  </fieldset>
-                </template>
+                <fieldset class="mb-3" x-show="currentQuestion">
+                  <legend class="fw-medium" x-text="currentQuestion ? currentQuestion.question : ''"></legend>
+                  <div>
+                    <template x-for="(opt, oidx) in (currentQuestion ? currentQuestion.options : [])" :key="oidx">
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" :name="currentQuestion.id" :value="oidx" x-model="answers[currentQuestion.id]" />
+                        <label class="form-check-label" x-text="opt"></label>
+                      </div>
+                    </template>
+                  </div>
+                </fieldset>
               </form>
               <div class="d-flex gap-2">
-                <button class="btn btn-primary" @click="submitQuiz()">Submit Quiz</button>
+                <button class="btn btn-primary" @click="handleNext()" x-text="nextLabel()"></button>
                 <a class="btn btn-outline-secondary" :href="courseLink">Back to course</a>
               </div>
             </div>

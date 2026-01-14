@@ -1,0 +1,10 @@
+{
+  "id": "002-lemma-chains",
+  "title": "Building Lemma Chains",
+  "content": [
+    "<h2>Overview</h2><p>Complex inequalities or identities often fall after assembling a chain of small lemmas (e.g., smoothing, convexity, or Muirhead).</p>",
+    "<h2>Strategy</h2><p>Prove helper bounds (e.g., <em>a^3+b^3+c^3+3abc \\ge \\sum_{sym} a^2b</em>) and reuse them modularly.</p>",
+    "<h2>Hard Problem</h2><p>For positive <em>a,b,c</em>, prove <em>\\sum \\frac{a^3}{(a+b)(a+c)} \\ge \\frac{1}{2}\\sum a</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Apply Cauchy in Engel form, then use <em>\\sum \\frac{a^2}{a+b} \\ge \\frac{(a+b+c)^2}{2(a+b+c)}=\\frac{a+b+c}{2}</em> after expansions.</p>"
+  ]
+}

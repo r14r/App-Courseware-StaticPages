@@ -1,0 +1,30 @@
+{
+  "id": "quiz-002",
+  "title": "Problem-Solving Navigation – Hard Problems",
+  "questions": [
+    {
+      "type": "free-response",
+      "question": "If (a^2+b^2) is divisible by (ab+1) for positive integers a,b, prove (a^2+b^2)/(ab+1) is a perfect square.",
+      "answer": "Proof-based",
+      "solution_outline": "Classical Vieta jumping: assume minimal a+b, derive a smaller solution by replacing one root with its Vieta mate, contradiction."
+    },
+    {
+      "type": "free-response",
+      "question": "For a,b,c>0 prove sum a^3/((a+b)(a+c)) ≥ (a+b+c)/2.",
+      "answer": "Proof-based",
+      "solution_outline": "Apply Engel form Cauchy on each fraction and sum; homogenize and reduce to known inequalities."
+    },
+    {
+      "type": "free-response",
+      "question": "Show that transforming (a,b)→(|a−b|,min(a,b)) terminates at (d,d) with d=gcd(a,b).",
+      "answer": "Proof-based",
+      "solution_outline": "Monovariant a+b decreases while gcd invariant is preserved, hence termination and correctness."
+    },
+    {
+      "type": "free-response",
+      "question": "For a+b+c=3 and a,b,c>0, prove sum a^2/(2a+b) ≥ 1.",
+      "answer": "Proof-based",
+      "solution_outline": "Use Cauchy on denominator sums, or Jensen on x^2/(2x+y) after verifying convexity in each variable."
+    }
+  ]
+}

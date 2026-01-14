@@ -1,0 +1,11 @@
+{
+  "id": "004-functional-equations-basics",
+  "title": "Functional Equations Basics (Injectivity, Cauchy Pitfalls)",
+  "content": [
+    "<h2>Overview</h2><p>Start with standard moves: plug constants, look for injectivity/surjectivity, swap variables, and search for invariants.</p>",
+    "<h2>Domain Matters</h2><p>Solutions over <em>\\mathbb{R}</em> often differ from <em>\\mathbb{Z}</em> or <em>\\mathbb{Q}</em> due to regularity assumptions.</p>",
+    "<h2>Hard Problem</h2><p>Find all functions <em>f:\\mathbb{Z}\\to\\mathbb{Z}</em> such that <em>f(x+y)+f(x-y)=2f(x)+2f(y)</em> for all integers <em>x,y</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Putting <em>y=0</em> gives <em>f(0)=0</em>; try polynomial ansatz and use induction to get <em>f(n)=an^2</em>.</p>",
+    "<pre><code class=\"language-python\"># Check a quadratic solution\nimport random\nfor a in [1,2,-3]:\n    def f(n):\n        return a*n*n\n    for _ in range(10):\n        x,y=[random.randint(-5,5) for __ in range(2)]\n        assert f(x+y)+f(x-y)==2*f(x)+2*f(y)\nprint(\"checked\")\n</code></pre>"
+  ]
+}

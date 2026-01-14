@@ -1,0 +1,18 @@
+[
+  {
+    "file": "001-vieta-jumping.json",
+    "title": "Vieta Jumping (Pell Flavor)"
+  },
+  {
+    "file": "002-lemma-chains.json",
+    "title": "Building Lemma Chains"
+  },
+  {
+    "file": "003-invariants-monovariants.json",
+    "title": "Invariants and Monovariants in Algebraic Processes"
+  },
+  {
+    "file": "004-inequalities-olympiad.json",
+    "title": "Inequalities at Olympiad Level"
+  }
+]

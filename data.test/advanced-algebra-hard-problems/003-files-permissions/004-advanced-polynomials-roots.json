@@ -1,0 +1,11 @@
+{
+  "id": "004-advanced-polynomials-roots",
+  "title": "Advanced Polynomials: Roots & Irreducibility",
+  "content": [
+    "<h2>Overview</h2><p>Use Rational Root Test, Eisenstein's criterion, and reduction mod <em>p</em> to prove irreducibility and analyze roots.</p>",
+    "<h2>Eisenstein</h2><p>If some prime <em>p</em> divides all coefficients except the leading one, and <em>p^2</em> does not divide the constant term, the polynomial is irreducible over <em>\\mathbb{Q}</em>.</p>",
+    "<h2>Hard Problem</h2><p>Show that <em>x^5-5x^3+5x-1</em> is irreducible over <em>\\mathbb{Q}</em>.</p>",
+    "<h3>Solution Sketch</h3><p>Substitute <em>x=y+1</em> then apply Eisenstein with <em>p=5</em>, or use reduction modulo 2 and 3 with Gauss's lemma.</p>",
+    "<pre><code class=\"language-python\">import sympy as sp\nx=sp.symbols('x')\nP=x**5-5*x**3+5*x-1\nQ=sp.factor(P)\nprint(Q)\n</code></pre>"
+  ]
+}

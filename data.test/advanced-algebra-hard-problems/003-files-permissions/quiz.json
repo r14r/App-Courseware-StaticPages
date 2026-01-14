@@ -1,0 +1,30 @@
+{
+  "id": "quiz-003",
+  "title": "Structures & Advanced Topics – Hard Problems",
+  "questions": [
+    {
+      "type": "free-response",
+      "question": "Find all n such that 7^n−3^n is divisible by 2n+1.",
+      "answer": "Small n only (e.g., n=1)",
+      "solution_outline": "Use order modulo 2n+1 and LTE to constrain possibilities; check small n explicitly."
+    },
+    {
+      "type": "free-response",
+      "question": "For a,b,c≥0, prove sum a^4/((a+b)(a+c)) ≥ (1/2) sum a^2.",
+      "answer": "Proof-based",
+      "solution_outline": "Engel form plus Schur's inequality to handle cross terms after homogenization."
+    },
+    {
+      "type": "free-response",
+      "question": "Find all functions f:R→R such that f(x+f(y))=f(x)+y.",
+      "answer": "f(x)=x",
+      "solution_outline": "From the equation get surjectivity and injectivity; deduce linear form f(x)=x+c; then set x=0 to fix c=0."
+    },
+    {
+      "type": "free-response",
+      "question": "Prove x^5−5x^3+5x−1 is irreducible over Q.",
+      "answer": "Irreducible",
+      "solution_outline": "Shift x=y+1 to get coefficients divisible by 5 except the leading, then apply Eisenstein with p=5."
+    }
+  ]
+}

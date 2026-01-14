@@ -1,0 +1,29 @@
+{
+  "id": "t1",
+  "title": "File ownership",
+  "content": [
+    "<h2>Overview</h2><p>File ownership covers ownership models and group strategy. This advanced section assumes you already know the basics and want faster, safer workflows.</p>",
+    "<h2>Prerequisites</h2><p>Make sure you are comfortable with basic navigation, listing, and reading manual pages before applying these techniques.</p>",
+    "<h2>Why it matters</h2><p>Advanced users save time by reducing ambiguity and verifying results quickly. These patterns help you avoid subtle mistakes.</p>",
+    "<h2>Example: baseline command</h2><p>Start from a reliable baseline and expand from there.</p>",
+    "<pre><code class=\"language-bash\">❯ ls -l /etc/passwd\nbin  etc  home  tmp  var\n</code></pre>",
+    "<p>Confirm you understand every flag before stacking more.</p>",
+    "<h2>Example: inspection</h2><p>Inspect system state before you change anything.</p>",
+    "<pre><code class=\"language-bash\">❯ id\nuid=1000(user) gid=1000(user) groups=1000(user)\n</code></pre>",
+    "<p>Write down what you expect the output to show.</p>",
+    "<h2>Example: controlled execution</h2><p>Use controlled execution to reduce side effects.</p>",
+    "<pre><code class=\"language-bash\">❯ stat /etc/passwd\n  File: file.txt\n  Size: 128\n</code></pre>",
+    "<p>Prefer dry runs or read-only checks when available.</p>",
+    "<h2>Example: repeatability</h2><p>Make the command easy to repeat or script.</p>",
+    "<pre><code class=\"language-bash\">❯ sudo chown root:root /tmp/file\n# (no output)\n</code></pre>",
+    "<p>Keep commands small and composable.</p>",
+    "<h2>Example: verification step</h2><p>Always verify the change after running a command.</p>",
+    "<pre><code class=\"language-bash\">❯ chgrp staff /tmp/file\n# (no output)\n</code></pre>",
+    "<p>Verification is what makes advanced workflows safe.</p>",
+    "<h2>Performance notes</h2><p>Use targeted queries and narrow filters. Broad scans can be slow or noisy on large systems.</p>",
+    "<h2>Safety checklist</h2><p>Double-check paths, confirm targets, and avoid running destructive commands without backups.</p>",
+    "<h2>Troubleshooting</h2><p>If output is unexpected, simplify the command and add flags one by one to isolate the issue.</p>",
+    "<h2>Practice tasks</h2><p>Apply the examples in a practice folder, then explain the output in your own words.</p>",
+    "<h2>Recap</h2><p>You now have advanced patterns for File ownership. Use them consistently to build speed and accuracy.</p>"
+  ]
+}

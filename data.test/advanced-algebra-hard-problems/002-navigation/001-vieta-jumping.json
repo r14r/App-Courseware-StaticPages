@@ -1,0 +1,11 @@
+{
+  "id": "001-vieta-jumping",
+  "title": "Vieta Jumping (Pell Flavor)",
+  "content": [
+    "<h2>Overview</h2><p>Vieta jumping attacks symmetric Diophantine equations by moving between integer solutions while decreasing a parameter.</p>",
+    "<h2>Template</h2><p>Fix one variable, view as quadratic in the other, use Vieta to get the 'jump' solution, prove descent terminates.</p>",
+    "<h2>Hard Problem</h2><p>Prove that if <em>ab+1</em> divides <em>a^2+b^2</em> for positive integers <em>a,b</em>, then <em>\\frac{a^2+b^2}{ab+1}</em> is a perfect square.</p>",
+    "<h3>Solution Sketch</h3><p>Assume minimal <em>a+b</em>, derive a smaller pair via the conjugate root; contradiction yields structure.</p>",
+    "<pre><code class=\"language-python\"># Small search to spot pattern\nsol=[]\nfor a in range(1,50):\n    for b in range(1,50):\n        t=a*a+b*b\n        d=a*b+1\n        if t%d==0:\n            sol.append((a,b,t//d))\nprint(sol[:10])\n</code></pre>"
+  ]
+}

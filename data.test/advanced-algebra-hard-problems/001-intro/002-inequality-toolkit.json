@@ -1,0 +1,13 @@
+{
+  "id": "002-inequality-toolkit",
+  "title": "Inequality Toolkit (Cauchy, Jensen, Rearrangement)",
+  "content": [
+    "<h2>Overview</h2><p>We survey powerful tools: Cauchy–Schwarz/Titu's Lemma, Jensen, and Rearrangement for symmetric problems.</p>",
+    "<h2>Cauchy–Schwarz</h2><p><em>(\\sum a_ib_i)^2 \\le (\\sum a_i^2)(\\sum b_i^2)</em>; Titu's Lemma: <em>\\sum \\frac{x_i^2}{y_i} \\ge \\frac{(\\sum x_i)^2}{\\sum y_i}</em>.</p>",
+    "<h2>Jensen</h2><p>For convex <em>f</em>, <em>\\frac{f(x_1)+\\cdots+f(x_n)}{n} \\ge f(\\frac{\\sum x_i}{n})</em>. Beware domain and convexity.</p>",
+    "<h2>Rearrangement</h2><p>Sorted sequences maximize/minimize pairwise sums and products strategically.</p>",
+    "<h2>Hard Problem</h2><p>For positive reals <em>a,b,c</em> with <em>a+b+c=1</em>, prove <em>\\sum \\frac{a^2}{b+c} \\ge \\frac{1}{2}+\\sum a^2</em>.</p>",
+    "<pre><code class=\"language-python\"># Numerical sanity check (random test, does not prove):\nimport random\nfor _ in range(5):\n    a,b,c = [random.random()+0.01 for __ in range(3)]\n    s=a+b+c\n    a,b,c = a/s,b/s,c/s\n    lhs = a*a/(b+c)+b*b/(c+a)+c*c/(a+b)\n    rhs = 0.5 + (a*a+b*b+c*c)\n    print(lhs>=rhs)\n</code></pre>",
+    "<h3>Solution Sketch</h3><p>Apply Cauchy (Titu) on <em>\\sum \\frac{a^2}{b+c}</em>, then use <em>a+b+c=1</em> and expand to compare to <em>\\sum a^2</em>.</p>"
+  ]
+}
